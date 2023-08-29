@@ -1,7 +1,7 @@
 .carousel-wrapper {
   position: relative;
   height: 300vh;
-  width: 100vw;
+  width: 90vw;
   display: flex;
   justify-content: center;
   margin-left: 3%;
@@ -23,7 +23,7 @@
   height: 65vh;;
 }
 
-.test {
+.carousel-interior {
   display: flex;
   gap: 15rem;
 }

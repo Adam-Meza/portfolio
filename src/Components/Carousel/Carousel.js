@@ -22,7 +22,7 @@ export const Carousel = () => {
   return (
     <section ref={targetRef} className='carousel-wrapper'>
      <div className='carousel-container'>
-      <motion.div style={{ x }} className='test'>
+      <motion.div style={{ x }} className='carousel-interior'>
         {content}
       </motion.div>
      </div>
