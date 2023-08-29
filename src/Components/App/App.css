@@ -72,3 +72,9 @@ h1 {
 .contact {
   margin-top: 20px;
 }
+
+.link:hover {
+  color: rgb(240, 208, 224);
+  font-style: italic;
+  cursor: pointer;
+}
