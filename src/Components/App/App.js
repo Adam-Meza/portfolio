@@ -1,23 +1,27 @@
 import './App.css';
 import { Carousel } from '../Carousel/Carousel';
 import { useState } from 'react';
-import { programming } from '../../assets/work/work';
+import { programming, tattoos } from '../../assets/work/work';
 import { ProgrammingCard } from '../ItemCards/ProgrammingCard/ProgrammingCard';
-import { use } from 'chai';
+import face from '../../assets/images/face.jpg'
+import { ArtCard } from '../ItemCards/ArtCard/ArtCard';
 
 function App() {
-  const [medium, setMedium] = useState(''),
+  const [display, setDisplay] = useState(''),
         [cards, setCards] = useState([]);
  
   const handleClick = (medium) => {
+    let mediumArray
+    setDisplay(medium)
 
-
-    const mediumArray = programming.map(item => <ProgrammingCard application={item}/>)
-    setMedium(medium)
+    if(medium === 'programming') {
+      mediumArray = programming.map(item => <ProgrammingCard application={item}/>)
+    } else if (medium === 'tattoos') {
+      mediumArray = tattoos.map(item => <ArtCard item={item}/> )
+    }
+    
     setCards(mediumArray)
   }
-
-
 
   return (
     <div className="App">
@@ -29,13 +33,13 @@ function App() {
         </div>
         <div className='link-container'>
           <span onClick={()=> handleClick('programming')} className='link'>programming</span>
-          <span className='link'>tattoos</span>
+          <span className='link' onClick={()=> handleClick('tattoos')}>tattoos</span>
           <span className='link'>art</span>
           <span className='contact link'>contact</span>
         </div>
       </aside>
-      {medium === 'programming' ? <Carousel content={cards}/> : null }
-
+      {display ? <Carousel content={cards}/> : null }
+      {!display ? <Carousel content={<img src ={face} className='carousel-item'/>} /> : null}
 
       {/* // <Carousel />   */}
     </div>

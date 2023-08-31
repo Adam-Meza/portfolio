@@ -1,19 +1,9 @@
 import React, {useRef, useState} from 'react'
 import './Carousel.css'
-import face from '../../assets/face.jpg'
-import shoe from '../../assets/2D-newBalance.jpg'
-import body from '../../assets/graphite-body1.jpg'
-import corona from '../../assets/graphite-corona.jpg'
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { ProgrammingCard } from '../ItemCards/ProgrammingCard/ProgrammingCard'
 
 export const Carousel = ({content}) => {
-  // const items = useState([face, body,corona, shoe])
-  // const content = [face, body,corona, shoe].map(src => 
-  //                   <img className='carousel-item'
-  //                         src={src}/>
-  //                   )
-  
   const targetRef = useRef(null)
   const {scrollYProgress} = useScroll({
     target: targetRef
