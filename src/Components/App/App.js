@@ -1,7 +1,7 @@
 import './App.css';
 import { Carousel } from '../Carousel/Carousel';
 import { useState } from 'react';
-import { programming, tattoos } from '../../assets/work/work';
+import { programming, tattoos, art } from '../../assets/work/work';
 import { ProgrammingCard } from '../ItemCards/ProgrammingCard/ProgrammingCard';
 import face from '../../assets/images/face.jpg'
 import { ArtCard } from '../ItemCards/ArtCard/ArtCard';
@@ -14,10 +14,10 @@ function App() {
     let mediumArray
     setDisplay(medium)
 
-    if(medium === 'programming') {
+    if(medium === programming) {
       mediumArray = programming.map(item => <ProgrammingCard application={item}/>)
-    } else if (medium === 'tattoos') {
-      mediumArray = tattoos.map(item => <ArtCard item={item}/> )
+    } else if (medium === tattoos || medium === art) {
+      mediumArray = medium.map(item => <ArtCard item={item}/> )
     }
     
     setCards(mediumArray)
@@ -32,16 +32,14 @@ function App() {
           <span className="creative">creative</span>
         </div>
         <div className='link-container'>
-          <span onClick={()=> handleClick('programming')} className='link'>programming</span>
-          <span className='link' onClick={()=> handleClick('tattoos')}>tattoos</span>
-          <span className='link'>art</span>
+          <span onClick={()=> handleClick(programming)} className='link'>programming</span>
+          <span className='link' onClick={()=> handleClick(tattoos)}>tattoos</span>
+          <span className='link' onClick={()=> handleClick(art)}>art</span>
           <span className='contact link'>contact</span>
         </div>
       </aside>
       {display ? <Carousel content={cards}/> : null }
       {!display ? <Carousel content={<img src ={face} className='carousel-item'/>} /> : null}
-
-      {/* // <Carousel />   */}
     </div>
   );
 }

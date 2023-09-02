@@ -7,21 +7,21 @@ import tattooHand from '../images/tattoo-hand.jpg'
 import tattooPidgeon from '../images/tattoo-pidgeon.jpg'
 import leaves from '../images/tattoo-leaves.jpg'
 import cloud from '../images/tattoo-cloud.jpg'
-import corona from '../graphite-corona.jpg'
-import lovers from '../graphite-lovers.jpg'
-import hands from '../grahphite-hands.jpg'
-import body1 from '../graphite-body1.jpg'
-import body2 from '../graphite-body3.jpg'
-import body3 from '../graphite-body4.jpg'
-import body4 from '../graphite-body5.jpg'
-import birds from '../2D-birds.jpg'
-import clouds from '../2D-clouds.jpg'
-import rihanna from '../2D-rihanna.jpg'
-import lipstick from '../2D-lipstick.jpg'
-import orange from '../2D-orange.jpg'
-import newBalance from '../2D-newBalance.jpg'
-import newBalance2 from '../2D-newBalance2.jpg'
-import sarah from '../2D-sarah.jpg'
+import corona from '../images/graphite-corona.jpg'
+import lovers from '../images/graphite-lovers.jpg'
+import hands from '../images/grahphite-hands.jpg'
+import body1 from '../images/graphite-body1.jpg'
+import body2 from '../images/graphite-body3.jpg'
+import body3 from '../images/graphite-body4.jpg'
+import body4 from '../images/graphite-body5.jpg'
+import birds from '../images/2D-birds.jpg'
+import clouds from '../images/2D-clouds.jpg'
+import rihanna from '../images/2D-rihanna.jpg'
+// import lipstick from '../images/2D-lipstick.jpg'
+import orange from '../images/2D-orange.jpg'
+import newBalance from '../images/2D-newBalance.jpg'
+import newBalance2 from '../images/2D-newBalance2.jpg'
+import sarah from '../images/2D-sarah.jpg'
 
 export const programming =  [
   {
@@ -86,43 +86,51 @@ export const tattoos = [
 
 export const art = [
   {
-    img: corona,
-    title: 'Love in the Time of Coronavirus (2020)'
-  },  {
-    img: hands,
-    title: 'is this good enough for you? (2019)'
-  },  {
     img: body1,
     title: 'Nudes in Blue #12 (2020)'
-  },  {
-    img: rihanna,
-    title: 'Are you feeling it yet Mr. Crabs? (2020)'
-  },  {
-    img: lipstick,
-    title: 'Lipstick Daddy (2022)'
-  },  {
-    img: newBalance,
-    title: '991.7 (2023)'
-  },  {
-    img: newBalance2,
-    title: ' (2023)'
-  },  {
-    img: body2,
-    title: 'Nudes in Blue #14 (2021)'
-  },  {
-    img: body3,
-    title: 'Nudes in Blue #9 (2020)'
-  },  {
-    img: orange,
-    title: 'Paradise (2020)'
-  },  {
-    img: sarah,
-    title: 'Adaptation (2020)'
-  },  {
+  }, 
+  {
     img: clouds,
     title: 'Clouds(2020)'
-  },  {
+  }, 
+  {
+    img: hands,
+    title: 'is this good enough for you? (2019)'
+  },
+  {
+    img: rihanna,
+    title: 'Are you feeling it yet Mr. Crabs? (2020)'
+  }, 
+  {
+    img: newBalance,
+    title: '991.7 (2023)'
+  }, 
+  {
+    img: newBalance2,
+    title: ' (2023)'
+  }, 
+  {
+    img: body2,
+    title: 'Nudes in Blue #14 (2021)'
+  }, 
+  {
+    img: body3,
+    title: 'Nudes in Blue #9 (2020)'
+  }, 
+  {
+    img: orange,
+    title: 'Paradise (2020)'
+  }, 
+  {
+    img: sarah,
+    title: 'Adaptation (2020)'
+  },  
+  {
     img: birds,
     title: 'Cover for Sean Nagel (2021)'
+  }, 
+  {
+    img: corona,
+    title: 'Love in the Time of Coronavirus (2020)'
   }
 ]
