@@ -1,16 +1,17 @@
 .programming-card-wrapper {
   display: flex;
   align-items: center;
-  width: 90vw;
+  justify-content: center;
+  width: 80vw;
   height: 75vh;
 }
 
 .app-text-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 25vw;
-  height: 100%;
+  justify-content: flex-end;
+  width: 23vw;
+  height: 85%;
   margin-left: 3%;
   font-family: "droid-serif", serif;
   font-weight: 200;  
@@ -34,7 +35,7 @@ h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 32px;
   margin: 3px 0px;
-  letter-spacing: 10px;
+  letter-spacing: 1px;
 }
 
 .app-name {
@@ -43,7 +44,7 @@ h3 {
 }
 
 .button-container {
-  margin: 0px 10px;
+  margin: 20px 10px;
   display: flex;
   justify-content: space-evenly;
   width: 90%;
@@ -55,8 +56,12 @@ h3 {
   font-family: "droid-serif", serif;
   padding: 1px 8px;
   height: 40px;
-  color: rgb(240, 208, 224);
+  color: white;
   border:none;
   background-color: black;
-  border-bottom: solid 1px rgb(240, 208, 224);
+  border: solid 1px rgb(240, 208, 224);
+}
+
+@media (max-width: 1440px) {
+  
 }

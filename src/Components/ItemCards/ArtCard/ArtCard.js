@@ -6,8 +6,8 @@ export const ArtCard = ({item}) => {
   
   return (
     <div className='art-card-wrapper'>
-      <img src={img} className='carousel-item'/>
-      <h3  className='art-title'>{title}</h3>
+      <img src={img} className='art-item'/>
+      <span  className='art-title'>{title}</span>
     </div>
   )
 }

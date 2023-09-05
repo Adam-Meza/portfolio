@@ -10,6 +10,7 @@ export const Carousel = ({content}) => {
   }) 
   
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"])
+  
   return (
     <section ref={targetRef} className='carousel-wrapper'>
      <div className='carousel-container'>

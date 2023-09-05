@@ -29,23 +29,23 @@ export const programming =  [
     img: hyperLoom,
     abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users new & expansive fictional worlds.",
     context: "HyperLoom was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",    repo: 'https://github.com/The-Never-Ending-Story/front-end',
-    stack: ["React", "Redux", ],
+    stack: ["React", "Redux" ],
     deployment: 'https://hyper-loom-explorer.vercel.app/'
-  },
-  {
-    name: 'birdle',
-    img: bordle,
-    abstract: '',
-    context: '',
-    repo: '',
-    stack: "",
-    deployment: ''
   },
   {
     name: 'wander',
     img: wander,
-    abstract: '',
-    context: '',
+    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations',
+    context: 'Wander was created over a 1 week sprint during my time at Turing.',
+    repo: '',
+    stack: "[HTML, SCSS, JavaScript]",
+    deployment: ''
+  },
+  {
+    name: 'boredle',
+    img: bordle,
+    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score.',
+    context: 'Boredle was made during a 8-hour hackathon.',
     repo: '',
     stack: "",
     deployment: ''

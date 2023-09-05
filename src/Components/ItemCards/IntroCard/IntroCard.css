@@ -1,0 +1,33 @@
+.intro-text-wrapper {
+  position: absolute;
+  right: 0;
+  font-family: "droid-serif", serif;
+  color: white;
+  height: 100%;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.intro-text {
+  font-size: 36px;
+}
+
+.intro-wrapper {
+  position: relative;
+  gap: 30px;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.intro-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
