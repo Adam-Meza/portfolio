@@ -3,14 +3,31 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  width: fit-content;
+}
+
+.art-details-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .art-title {
+  width: fit-content;
+  margin: 5px;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "droid-serif", serif;
+}
+
+.art-year {
+  width: fit-content;
+  font-size: 14px;
+  color: rgb(247, 222, 234);
+  margin: 5px;
 }
 
 .art-item {
   height: 70vh;
+  width: auto;
 }

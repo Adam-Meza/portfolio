@@ -12,6 +12,18 @@ export const ProgrammingCard = ({application}) => {
       <img className='carousel-item' src={img}/>
       <div className='app-text-wrapper'>
         <h2 className ={`app-name ${name}`}>{name}</h2>
+        <div className='details-container'>
+          <span className='detail'>
+            Full Stack Team
+          </span>
+          <span className='detail'>
+            React, Redux, Framer Motion
+          </span>
+          <span className='detail'>
+            40 hours
+          </span>
+        </div>
+
         <h3>Abstract</h3>
         <p className='app-text'>{abstract}</p>
         <h3>Context</h3>

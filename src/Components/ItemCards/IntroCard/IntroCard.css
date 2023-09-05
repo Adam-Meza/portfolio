@@ -1,33 +1,88 @@
-.intro-text-wrapper {
+.overlay {
   position: absolute;
-  right: 0;
-  font-family: "droid-serif", serif;
-  color: white;
-  height: 100%;
-  width: 32%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.intro-text {
-  font-size: 36px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(28, 67, 102, 0.15);
 }
 
 .intro-wrapper {
   position: relative;
   gap: 30px;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
+  overflow: hidden;
+}
+
+.intro-text-wrapper {
+  gap: 20px;
+  position: absolute;
+  left: 3%;
+  bottom: 0;
+  font-family: "droid-serif", serif;
+  color: white;
+  height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   justify-content: flex-start;
-  align-items: flex-start;
-  justify-content: space-between;
+}
+
+.intro-text {
+  z-index: 2;
+  font-size: 24px;
+  width: fit-content;
 }
 
 .intro-img {
   position: absolute;
-  top: 0;
+  bottom: -25%;
   left: 0;
-  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-height: 900px) {
+  .intro-img {
+    bottom: -15%;
+  }
+}
+
+
+/* @media (max-width: 1800px) {
+  .intro-img {
+    bottom: -20%;
+  }
+} */
+
+@media (max-width: 1500px) {
+  .intro-img {
+    bottom: -18%;
+  }
+}
+
+
+@media(max-width: 1200px) {
+  .intro-img {
+    bottom: -5%;
+  }
+}
+
+@media(max-width: 1100px) {
+  .intro-img {
+    bottom: 0%;
+  }
+}
+
+@media (max-width: 990px) {
+  .intro-img {
+    bottom: 0;
+    height: 100vh;
+    width: auto;
+    aspect-ratio:initial;
+    top: 0x;
+    
+  }
 }

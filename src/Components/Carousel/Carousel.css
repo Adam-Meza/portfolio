@@ -5,11 +5,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: black;
+  background-color: rgb(23, 41, 50);
 }
 
 .carousel-container {
-  background-color: black;
   height: 100vh;
   position: sticky;
   width: 90vw;

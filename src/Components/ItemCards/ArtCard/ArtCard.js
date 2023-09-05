@@ -2,12 +2,20 @@ import React from 'react'
 import './ArtCard.css'
 
 export const ArtCard = ({item}) => {
-  const {img, title} = item;
+  const {img, title, year} = item;
   
   return (
     <div className='art-card-wrapper'>
       <img src={img} className='art-item'/>
-      <span  className='art-title'>{title}</span>
+      <div className='art-details-container'>
+        <span className='art-title'>
+          {title}
+        </span>
+        <span className='art-year'>
+          ({year})
+        </span>
+      </div>
+    
     </div>
   )
 }
