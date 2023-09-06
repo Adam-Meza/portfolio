@@ -3,8 +3,8 @@ import './ProgrammingCard.css'
 
 export const ProgrammingCard = ({application}) => {
   const {name, context, img, abstract, repo, deployment} = application
+  
   useEffect(() => {
-    console.log('test')
   })
 
   return (

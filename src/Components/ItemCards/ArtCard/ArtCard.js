@@ -8,12 +8,8 @@ export const ArtCard = ({item}) => {
     <div className='art-card-wrapper'>
       <img src={img} className='art-item'/>
       <div className='art-details-container'>
-        <span className='art-title'>
-          {title}
-        </span>
-        <span className='art-year'>
-          ({year})
-        </span>
+        <span className='art-title'>{title}</span>
+        {year && <span className='art-year'>( {year} )</span>}
       </div>
     
     </div>

@@ -63,28 +63,28 @@ export const programming =  [
 export const tattoos = [
   {
     img: tattooHand,
-    title: "Magic Hand",
-    year: "2022"
+    title: "",
+    year: ""
   },
   {
     img: strawberry,
-    title: "Strawberry",
-    year: "2021"
+    title: "",
+    year: ""
   },
   {
     img: tattooPidgeon,
-    title: "Hereditary",
-    year: "2022"
+    title: "",
+    year: ""
   },
   {
     img: leaves,
-    title: "Leaves",
-    year: "2022"
+    title: "",
+    year: ""
   },
   {
     img: cloud,
-    title: "The Very First",
-    year: "2021"
+    title: "",
+    year: ""
   },
 ]
 

@@ -33,7 +33,7 @@
 
 .intro-text {
   z-index: 2;
-  font-size: 24px;
+  font-size: 20px;
   width: fit-content;
 }
 
@@ -51,11 +51,11 @@
 }
 
 
-/* @media (max-width: 1800px) {
+@media (max-width: 1800px) {
   .intro-img {
     bottom: -20%;
   }
-} */
+}
 
 @media (max-width: 1500px) {
   .intro-img {
@@ -64,7 +64,7 @@
 }
 
 
-@media(max-width: 1200px) {
+@media(max-width: 1300px) {
   .intro-img {
     bottom: -5%;
   }
@@ -76,13 +76,13 @@
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 996px) {
   .intro-img {
     bottom: 0;
     height: 100vh;
     width: auto;
     aspect-ratio:initial;
     top: 0x;
-    
+
   }
 }

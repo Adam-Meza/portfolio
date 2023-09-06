@@ -2,10 +2,28 @@
   position: relative;
   height: 300vh;
   width: 100vw;
+  max-width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: rgb(23, 41, 50);
+  background-color: rgb(1, 17, 25);
+}
+
+.carousel-page-wrapper {
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.scroll-loader {
+  z-index: 1;
+  position: fixed;
+  bottom: 7%;
+  left: 2%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid rgb(247, 222, 234);
 }
 
 .carousel-container {
@@ -26,4 +44,10 @@
 .carousel-interior {
   display: flex;
   gap: 15rem;
+}
+
+@media (max-width: 1440px) {
+  .carousel-container{
+    margin-left: 13%;
+  }
 }

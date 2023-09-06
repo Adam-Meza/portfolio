@@ -1,6 +1,8 @@
 body{
   margin: 0px;
+  width: 100vw;
   padding: 0px;
+  overflow-x:hidden;
 }
 
 .root {
@@ -9,11 +11,28 @@ body{
 }
 
 .App {
-  width: 100%;
+  width: 100vw;
   height: 95vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
   color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f4a7e5; 
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(247, 222, 234);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
 }
