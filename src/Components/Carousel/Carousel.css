@@ -1,17 +1,17 @@
+.carousel-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
 .carousel-wrapper {
   position: relative;
-  height: 300vh;
+  height: 200vh;
   width: 100vw;
   max-width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: rgb(1, 17, 25);
-}
-
-.carousel-page-wrapper {
-  width: 100vw;
-  height: 100vh;
 }
 
 .scroll-loader {

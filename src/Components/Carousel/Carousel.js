@@ -27,15 +27,14 @@ export const Carousel = ({content}) => {
   })
 
   return (
-
     <div className="carousel-page-wrapper">
       <div className='scroll-loader'></div>
       <section ref={targetRef} className='carousel-wrapper'>
-      <div className='carousel-container'>
-        <motion.div style={{ x }} className='carousel-interior'>
-          {display}
-        </motion.div>
-      </div>
+        <div className='carousel-container'>
+          <motion.div style={{ x }} className='carousel-interior'>
+            {display}
+          </motion.div>
+        </div>
       </section>
     </div>
 

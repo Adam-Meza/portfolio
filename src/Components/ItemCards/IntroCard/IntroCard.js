@@ -12,7 +12,6 @@ export const IntroCard = () => {
         <span className='intro-text'>my name is adam.</span>
         <span className='intro-text'>i make art.</span>
         </p>
-
     </div>
   )
 }
