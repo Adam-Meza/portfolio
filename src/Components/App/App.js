@@ -7,14 +7,18 @@ import { Aside } from '../Aside/Aside';
 import { AboutCard } from '../ItemCards/AboutCard/AboutCard';
 import { ContactCard } from '../ItemCards/ContactCard/ContactCard';
 import { Switch, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function App() {
-  const handleClick = (medium) => {
+  const history = useHistory()
+
+  const handleClick = (route) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
 
+    history.push(`/${route}`)
   };
 
   return (
@@ -26,7 +30,7 @@ function App() {
         <Route exact path='/art' render= {() => <Carousel content={ art }/>}/>
         <Route exact path='/programming' render= {() => <Carousel content={ programming }/>}/>
         <Route exact path='/tattoos'render= {() => <Carousel content={ tattoos }/>}/>
-        <Route exact path='/about'render= {() => <AboutCard/> }/>
+        <Route exact path='/about'render= {() => <AboutCard handleClick={handleClick}/> }/>
         <Route exact path='/contact' render= {() => <ContactCard/>}/>
       </Switch>
     </div>

@@ -3,6 +3,7 @@ body{
   width: 100vw;
   padding: 0px;
   overflow-x:hidden;
+  background-color: black;
 }
 
 .root {
@@ -12,7 +13,7 @@ body{
 
 .App {
   width: 100vw;
-  height: 95vh;
+  height: 99vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

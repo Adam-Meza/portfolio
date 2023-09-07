@@ -1,20 +1,28 @@
 .contact-wrapper {
-  border: white 1px solid;
-  height: 50vh;
-  width: 50vw;
+  height: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
-  align-self: center;
+  font-size: 18px;
+  background-color: black;
 }
 
-.contact-container {
+.contact-ctonainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: white 1px solid;
+}
+
+.contact-link-container {
   width: 40vw;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .contact-text {
@@ -22,4 +30,9 @@
   margin: 0px;
   font-size: 20px;
   text-align: center;
+}
+
+.contact {
+  font-size: 36px;
+  font-family: 'Bebas Neue', sans-serif;
 }
