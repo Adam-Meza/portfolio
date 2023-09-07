@@ -5,13 +5,13 @@ export const ArtCard = ({item}) => {
   const {img, title, year} = item;
   
   return (
-    <div className='art-card-wrapper'>
+    <section className='art-card-wrapper'>
       <img src={img} className='art-item'/>
       <div className='art-details-container'>
         <span className='art-title'>{title}</span>
         {year && <span className='art-year'>( {year} )</span>}
       </div>
     
-    </div>
+    </section>
   )
 }
