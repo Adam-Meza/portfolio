@@ -2,13 +2,23 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export const IntroName = ({name, handleClick}) => {
+  const slideInVariant = {
+    initial: {
+      translateY: -400,
+    },
+    animate: {
+      translateY: 0
+    },
+  }
+
   const nameDisplay = name.split()
-                          .map(letter => 
+                          .map((letter, index) => 
                             <motion.span
+                            key={index}
                               className='name'
-                              initial={{opacity: 0}}
-                              whileInView ={{opacity: 1}}
-                            
+                              variants={slideInVariant}
+                              initial='initial'
+                              animate='animate'
                             >
                               {letter}
                             </motion.span>)
