@@ -54,7 +54,7 @@ span {
   font-family: "droid-serif", serif;
 }
 
-.link:hover, .name-container:hover {
+.link:hover, .name-wrapper:hover {
   color: rgb(247, 222, 234);
   font-style: italic;
   cursor: pointer;

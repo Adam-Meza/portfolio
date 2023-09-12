@@ -24,16 +24,42 @@ export const AboutCard = ({handleClick}) => {
             </div>
 
             <div className='about-card-wrapper'>
+              <div className='cv-wrapper'>
+
+                <h2 className='cv-title'>CV</h2>
+
+                <div className='cv-item-wrapper'>
+                  <h3 className='year'>STACK</h3> 
+                  <div className='cv-item-container'>
+                    <span className='cv-item-title'>Frontend</span>
+                    <span className='cv-item-details'>React JS/Native, CSS, Sass/SCSS, JavaScript ES6, TypeScript, HTML5</span>
+                  </div>
+
+                  <div className='cv-item-container'>
+                    <span className='cv-item-title'>Backend</span>
+                    <span className='cv-item-details'>Node.JS, Express</span>
+                  </div>
+                </div>
+              
+                <div className='cv-item-wrapper'>
+                  <h3 className='year'>2023</h3> 
+                  <div className='cv-item-container'>
+                    <span className='cv-item-title'>Turing School of Software Design</span>
+                    <span className='cv-item-details'>Earned Certificate in Frontend Software Development</span>
+                  </div>
+
+
+                  
+                </div>
+
+              </div> 
+            </div>
+
+            <div className='about-card-wrapper'>
               <div className='text-container'>
                 <p className='about-text'>In my view, computer programming is a unique artistic medium, which generates levels of meaning through interconnectivity rarely found in other art forms. As a former tattoo artist and sous chef, I bring a depth of artistic experience to each application.</p>
                 <span className='link' onClick={()=> handleClick('contact')}>Let's create together</span>
               </div>
-            </div>
-
-            <div className='about-card-wrapper'>
-              <div className='cv-wrapper'>
-                <h2 className='cv-title'>CV</h2>
-              </div> 
             </div>
 
           </motion.div>

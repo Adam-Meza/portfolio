@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './ProgrammingCard.css'
 
 export const ProgrammingCard = ({application}) => {
-  const {name, context, img, abstract, repo, deployment} = application
+  const {name, img, abstract, repo, deployment, details} = application
   
   useEffect(() => {
   })
@@ -13,25 +13,23 @@ export const ProgrammingCard = ({application}) => {
       <div className='app-text-wrapper'>
         <h2 className ={`app-name ${name}`}>{name}</h2>
         <div className='details-container'>
-          <span className='detail'>
-            Full Stack Team
-          </span>
-          <span className='detail'>
-            React, Redux, Framer Motion
-          </span>
-          <span className='detail'>
-            40 hours
-          </span>
+          <span className='detail'>{`${details.type} Project`}</span>
+          <span className='detail'>{details.stack}</span>
+          <span className='detail'>{`${details.hours} Hours`}</span>
         </div>
 
         <h3>Abstract</h3>
         <p className='app-text'>{abstract}</p>
-        <h3>Context</h3>
-        <p className='app-text'>{context}</p>
         <div className='button-container'>
-          <button className='app-link'>Deployment</button>
-          <button className='app-link'>GitHub</button>
+          {deployment && 
+          <a className='app-link'href= {deployment}>
+            Deployment
+          </a>}
+          <a className='app-link'href={repo}>
+            GitHub
+          </a>
         </div>
+        
       </div>
     </div>
   )

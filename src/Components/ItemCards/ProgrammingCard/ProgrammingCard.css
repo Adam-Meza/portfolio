@@ -53,6 +53,9 @@ h3 {
 }
 
 .app-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   letter-spacing: 1px;
   font-family: "droid-serif", serif;

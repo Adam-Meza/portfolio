@@ -26,7 +26,8 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f4a7e5; 
+  
+  background-color: #f2c1e8; 
   border-radius: 4px; 
 }
 
@@ -36,4 +37,19 @@ body{
 
 ::-webkit-scrollbar-track {
   background-color: rgb(255, 255, 255);
+}
+
+a {
+ all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: rgb(247, 222, 234);
+  color: #f2c1e8;
+}
+
+a:active {
+  background-color: rgb(244, 212, 228);
+
 }

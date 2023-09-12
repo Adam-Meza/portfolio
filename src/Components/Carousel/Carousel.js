@@ -13,22 +13,24 @@ export const Carousel = ({content}) => {
   }) 
   
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"])
+  const scrollTextOpacity = useTransform(scrollYProgress, [0, 0.10], [1, 0])
 
   useEffect(()=> {
     let displayElement
 
     if(content === programming) {
-      displayElement = content.map(item => <ProgrammingCard application={item}/>);
+      displayElement = content.map((item, index) => <ProgrammingCard application={item} key={index}/>);
     } else if (content === tattoos || content === art) {
-      displayElement = content.map(item => <ArtCard item={item}/> );
+      displayElement = content.map((item, index) => <ArtCard item={item} key={index}/> );
     }
 
     setDisplay(displayElement)
-  })
+  }, [content])
+
 
   return (
     <div className="carousel-page-wrapper">
-      {/* <div className='scroll-loader'></div> */}
+      <motion.p className='scroll-text' style={{opacity: scrollTextOpacity}}>Scroll to view more</ motion.p>
       <section ref={targetRef} className='carousel-wrapper'>
         <div className='carousel-container'>
           <motion.div style={{ x }} className='carousel-interior'>

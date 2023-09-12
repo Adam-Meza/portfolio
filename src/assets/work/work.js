@@ -26,38 +26,52 @@ export const programming =  [
   {
     name: 'HYPERLOOM',
     img: hyperLoom,
-    abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds.",
-    context: "HyperLoom was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",    repo: 'https://github.com/The-Never-Ending-Story/front-end',
-    stack: ["React", "Redux"],
+    abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds. It was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",   
     repo: 'https://github.com/The-Never-Ending-Story/front-end',
-    deployment: 'https://hyper-loom-explorer.vercel.app/'
-  },
+    deployment: 'https://hyper-loom-explorer.vercel.app/',
+    details: {
+      type: 'Group',
+      hours: '60',
+      stack: ["React, ", "Redux"],
+      }
+    },
   {
     name: 'wander',
     img: wander,
-    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations',
-    context: 'Wander was created over a 1 week sprint during my time at Turing.',
+    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during my time at Turing.',
     repo: 'https://github.com/Adam-Meza/Travel-Tracker',
-    stack: ['HTML', 'SCSS', 'JavaScript'],
-    deployment: ''
+    deployment: '',
+    details: {
+      type: 'Solo',
+      hours: '25',
+      stack: ['HTML, ', 'SCSS, ', 'JavaScript'],
+    }
   },
   {
     name: 'boredle',
     img: bordle,
-    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score.',
-    context: 'Boredle was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native)',
+    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native)',
     repo: 'https://www.google.com/url?q=https://github.com/Adam-Meza/boredle&sa=D&source=docs&ust=1694356983830676&usg=AOvVaw2abIkSFKWqt9_Ym3M52GCh',
     stack: ['React Native'],
-    deployment: ''
+    deployment: '',
+    details: {
+      type: 'Solo',
+      hours: '16',
+      stack: ['React Native'],
+    }
   },
   {
     name: 'nectr',
     img: nectr,
-    abstract: 'Nectr is a web-based ',
-    context: 'Nectr was built as the final solo project during the third module of Turing. It uses the Free Bee AP.',
+    abstract: 'Nectr is a web-based Spelling Bee Proxy application. It was built as the final solo project during the third module of Turing. It uses the Free Bee AP.',
     repo: 'https://github.com/Adam-Meza/nectr-app',
     stack: ['React', 'TypeScript'],
-    deployment: 'https://nectr-game-app.vercel.app/'
+    deployment: 'https://nectr-game-app.vercel.app/',
+    details: {
+      type: 'Solo',
+      hours: '30',
+      stack: ['React, ', 'TypeScript'],
+    }
   }
 ]
 

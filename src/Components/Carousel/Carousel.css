@@ -5,8 +5,7 @@
 
 .carousel-wrapper {
   position: relative;
-  height: 200vh;
-  width: 100vw;
+  height: 150vh;
   max-width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -14,21 +13,20 @@
   background-color: rgb(1, 17, 25);
 }
 
-.scroll-loader {
+.scroll-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
   z-index: 1;
   position: fixed;
-  bottom: 7%;
-  left: 2%;
-  width: 100px;
+  top: 3%;
+  left: 11%;
   height: 100px;
-  border-radius: 50%;
-  border: 6px solid rgb(247, 222, 234);
+  color: rgb(247, 222, 234)
 }
 
 .carousel-container {
   height: 100vh;
   position: sticky;
-  width: 90vw;
   margin-left: 11%;
   top: 0;
   display: flex;
