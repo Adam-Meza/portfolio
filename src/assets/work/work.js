@@ -38,7 +38,7 @@ export const programming =  [
   {
     name: 'wander',
     img: wander,
-    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during my time at Turing.',
+    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during my time at Turing. Wander served as an exercise in routing with JavaScript, designing UI, and hosting information locally.',
     repo: 'https://github.com/Adam-Meza/Travel-Tracker',
     deployment: '',
     details: {
@@ -50,7 +50,7 @@ export const programming =  [
   {
     name: 'boredle',
     img: bordle,
-    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native)',
+    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native).',
     repo: 'https://www.google.com/url?q=https://github.com/Adam-Meza/boredle&sa=D&source=docs&ust=1694356983830676&usg=AOvVaw2abIkSFKWqt9_Ym3M52GCh',
     stack: ['React Native'],
     deployment: '',
@@ -165,3 +165,28 @@ export const art = [
     year: '2020'
   }
 ]
+export const experience = [
+  {
+    title: 'Turing School of Software Design',
+    description: 'Earned Certificate in Frontend Software Development | 1/2023 - 8/2023'
+  },
+  {
+    title: 'Barista',
+    description: 'La Colombe | 11/2022 - 1/2023'
+  },
+  {
+    title: 'Tattoo Artist',
+    description: 'Heartbreak Studio | 8/2021 - 8/2022'
+  },
+  {
+    title: 'Team Trainer',
+    description: 'Whole Foods Market | 9/2020 - 6/2021'
+  },
+  {
+    title: 'Lead Prep / Baker',
+    description: 'Meadowlark Kitchen | 9/2017- 9-2018'
+  }
+];
+
+
+

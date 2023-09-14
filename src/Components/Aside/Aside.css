@@ -13,6 +13,7 @@ aside {
 }
 
 .link-container {
+  all: unset;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,8 @@ aside {
   margin-bottom: 10px;
 }
 
-span {
+li {
+  all: unset;
   font-size: 19px;
   font-family: "droid-serif", serif;
 }

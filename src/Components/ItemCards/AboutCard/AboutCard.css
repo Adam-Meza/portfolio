@@ -31,15 +31,14 @@
 }
 
 .about-card-wrapper {
-  border: 1px red solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color:white;
   height: 100vh;
-  width: 60vw;
-  padding: 0px 100px;
+  width: 50vw;
+  padding: 0px 80px;
 }
 
 .art-quote {
@@ -72,13 +71,66 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  margin-top: 30px;
 }
 
-.text-container {
+.cv-wrapper {
+  width: 100%;
+  height: 80%;
+}
+
+.cv-title {
+  border-bottom: .5px solid rgb(247, 222, 234);
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.cv-item-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cv-item-container {
+  font-family: "droid-serif", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-item-details {
+  font-size: 14px;
+}
+
+.cv-item-wrapper {
+  margin-bottom: 15px;
+}
+
+.about-text-container {
+  height: 50%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
-  height: 100%;
+  align-items: center;
+  font-size: 24px;
+}
+
+.cv-year {
+  width: fit-content;
+  font-size: 20px;
+  border-bottom: .5px solid rgb(247, 222, 234);
+}
+
+.cv-skill-container {
+  margin: 0px;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.create {
+  padding: 20px;
+  letter-spacing: 3px;
+  font-family: 'Bebas Neue', sans-serif;
+  border: .5px solid rgb(247, 222, 234);
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export const IntroName = ({name, handleClick}) => {
+export const IntroName = ({name, handleNav}) => {
   const slideInVariant = {
-    initial: {
-      translateY: -400,
-    },
-    animate: {
-      translateY: 0
-    },
+    // initial: {
+    //   translateY: -400,
+    // },
+    // animate: {
+    //   translateY: 0
+    // },
   }
 
   const nameDisplay = name.split()
@@ -27,7 +27,7 @@ export const IntroName = ({name, handleClick}) => {
     <div>
       <div
         className='name-container'
-        onClick={() => handleClick("home")}
+        onClick={() => handleNav("home")}
       >
         {nameDisplay}
       </div>

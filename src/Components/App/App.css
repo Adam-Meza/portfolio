@@ -2,7 +2,7 @@ body{
   margin: 0px;
   width: 100vw;
   padding: 0px;
-  overflow-x:hidden;
+  overflow-x: hidden;
   background-color: rgb(1, 17, 25);
 }
 
@@ -43,13 +43,3 @@ a {
  all: unset;
 }
 
-a:hover {
-  cursor: pointer;
-  background-color: rgb(247, 222, 234);
-  color: #f2c1e8;
-}
-
-a:active {
-  background-color: rgb(244, 212, 228);
-
-}
