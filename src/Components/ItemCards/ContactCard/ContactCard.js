@@ -1,5 +1,6 @@
 import React from 'react'
 import './ContactCard.css'
+import { motion } from 'framer-motion';
 
 export const ContactCard = () => {
   return (

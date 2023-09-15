@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react'
 import './Carousel.css'
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { stagger, useScroll, motion, useTransform } from 'framer-motion';
 import { art, tattoos, programming } from '../../assets/work/work';
 import { ArtCard } from '../ItemCards/ArtCard/ArtCard';
 import { ProgrammingCard } from '../ItemCards/ProgrammingCard/ProgrammingCard';

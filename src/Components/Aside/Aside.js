@@ -1,6 +1,7 @@
 import React from 'react'
 import './Aside.css'
 import { IntroName } from './IntroName';
+import { motion } from 'framer-motion';
 
 export const Aside = ({handleNav}) => {
 

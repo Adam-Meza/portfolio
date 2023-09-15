@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-import './ProgrammingCard.css'
+import React, { useEffect } from 'react';
+import './ProgrammingCard.css';
+import { motion } from 'framer-motion';
 
 export const ProgrammingCard = ({application}) => {
   const {name, img, abstract, repo, deployment, details} = application
@@ -29,7 +30,7 @@ export const ProgrammingCard = ({application}) => {
             GitHub
           </a>
         </div>
-        
+
       </div>
     </div>
   )

@@ -27,7 +27,7 @@ export const IntroName = ({name, handleNav}) => {
     <div>
       <div
         className='name-container'
-        onClick={() => handleNav("home")}
+        onClick={() => handleNav("")}
       >
         {nameDisplay}
       </div>

@@ -33,15 +33,12 @@ export const AboutCard = ({ handleNav }) => {
               </div>
             </div>
 
-
-
             <div className='about-card-wrapper'>
               <span className='art-quote'> "Arts' meaning is 'owned by no one,</span>
               <span className='art-quote'>but subsists between [artist and spectator],</span>
               <span className='art-quote'>excluding any unifrom transmission, any identity of cause and effect.'"</span>
               <span className='jacques'>(Jacques Ranciere, paraphrased)</span>
             </div>
-
 
             <div className='about-card-wrapper'>
               <div className='about-text-container'>

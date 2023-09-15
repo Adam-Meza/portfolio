@@ -98,6 +98,24 @@ h3 {
   background-color: rgb(244, 212, 228);
 }
 
-@media (max-width: 1440px) {
-  
+@media (max-width: 1300px) {
+  .carousel-item {
+    height: 60vh;
+  }
+
+  .app-name {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .app-text {
+    font-size: 14px;
+  }
+
+  .programming-card-wrapper {
+    width: 90vw;
+  }
 }

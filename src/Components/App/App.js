@@ -37,8 +37,8 @@ function App() {
 
   return (
     <div className="App">
-      {windowWidth > 700 && <Aside handleNav={handleNav}/>}
-      {windowWidth < 700 && <Header handleNav={handleNav}/>}
+      {windowWidth > 1100 && <Aside handleNav={handleNav}/>}
+      {windowWidth < 1100 && <Header handleNav={handleNav}/>}
       <Switch>
         <Route exact path='/'render= {() => <IntroCard />}/>
         <Route exact path='/art' render= {() => <Carousel content={ art }/>}/>

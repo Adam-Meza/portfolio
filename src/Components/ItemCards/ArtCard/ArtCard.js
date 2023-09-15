@@ -1,5 +1,6 @@
 import React from 'react'
 import './ArtCard.css'
+import { motion, stagger } from 'framer-motion';
 
 export const ArtCard = ({item}) => {
   const {img, title, year} = item;

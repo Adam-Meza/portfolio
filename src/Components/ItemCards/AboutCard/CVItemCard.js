@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutCard.css'
+import { motion } from 'framer-motion'
 
 export const CVItemCard = ({ item }) => {
   return (
