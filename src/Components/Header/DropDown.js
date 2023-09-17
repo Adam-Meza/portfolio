@@ -20,12 +20,12 @@ export const DropDown = ({handleNav}) => {
       </button>
       {open &&
         <div className='dropdown'>
-          <ul className='link-container'>
+          <ul className='link-container test'>
             <li onClick={() => handleLinkClick('programming')} className='link'>programming</li>
             <li className='link' onClick={() => handleLinkClick('tattoos')}>tattoos</li>
             <li className='link' onClick={() => handleLinkClick('art')}>art</li>
           </ul>
-          <ul className='link-container'>
+          <ul className='link-container test'>
             <li className='link' onClick={() => handleLinkClick('about')}>about</li>
             <li className='link' onClick={() => handleLinkClick('contact')}>contact</li>
           </ul>

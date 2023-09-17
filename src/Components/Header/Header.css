@@ -6,9 +6,10 @@
   top: 0;
   left: 0;
   z-index: 3;
-  border-bottom: .5px solid white;
+  border-bottom: .5px solid  rgb(247, 222, 234);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header-name-container {
@@ -18,7 +19,7 @@
 }
 
 .dropdown-button {
-  z-index: 100;
+  z-index: 1;
   border: .5px solid white;
   width: 40px;
   height: 40px;
@@ -37,14 +38,13 @@
  cursor: pointer;
 }
 
-
 .arrow-line {
-  width: 20px; /* Make the lines full width of the button */
-  height: 2px; /* Adjust the height to control the thickness of the lines */
-  background-color: #ffffff; /* Line color */
+  width: 20px; 
+  height: 2px; 
+  background-color: #ffffff; 
   position: absolute;
-  top: 50%; /* Center the lines vertically */
-  transform: translateY(-50%); /* Center the lines vertically */
+  top: 50%; 
+  transform: translateY(-50%); 
 }
 
 .arrow-line:first-child {
@@ -57,10 +57,24 @@
   transform: rotate(-57deg);
 }
 
+.dropdown-wrapper {
+  position: fixed;
+  top: 0;
+  
+}
+
 .dropdown {
   color: white;
-  z-index: 2;
+  z-index: 1;
   height: 50vh;
   width: 60vw;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test {
+  z-index: 2;
+  border: red 1px solid;
 }

@@ -40,14 +40,14 @@ export const Aside = ({ handleNav }) => {
 
   const link = {
     initial: {
-      x: -30,
+      x: -200,
       opacity: 0,
     },
     show: {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 1.5,
       },
     },
     exit: {
@@ -66,6 +66,7 @@ export const Aside = ({ handleNav }) => {
         variants={wrapper}
         initial='initial'
         animate='show'
+        exit='exit'
       >
         <IntroName name='ADAM' handleNav={handleNav} variants={word} />
         <IntroName name='MEZA' handleNav={handleNav} variants={word} />

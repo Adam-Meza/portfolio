@@ -5,37 +5,27 @@ import { motion } from 'framer-motion';
 
 export const IntroCard = () => {
   const container = {
-    intial: {
+    initial: {
       opacity: 0
     },
     show: {
+      opacity: 1,
       transition: {
         delay: 2,
-        staggerChildren: .8, 
+        staggerChildren: 0.8, 
       },
     },
   };
 
-  const word = {
-    initial: { 
-      y: 30,
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: -10,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
+  const introWords = ['hello world,', 'my name is adam', '& i make art'].map((phrase, index) => {
+    return (
+      <IntroWord
+        key={index}
+        phrase={phrase}
+        index={index}
+      />
+    );
+  });
 
   return (
     <div className='intro-wrapper'>
@@ -50,10 +40,11 @@ export const IntroCard = () => {
           opacity: 1,
           transition: {
             duration: 1,
-            delay: 1.5,
+            delay: 3.5
           }
         }}
       />
+
       <motion.p 
         className='intro-text-wrapper'
         variants={container}
@@ -61,19 +52,38 @@ export const IntroCard = () => {
         animate='show'
         exit='exit'
       >
-        <IntroWord variants={word} phrase ="hello world" />
-        <IntroWord variants={word} phrase ="my name is adam." />
-        <IntroWord variants={word} phrase ="i make art." />
+        {introWords}
       </motion.p>
     </div>
   );
 };
 
-const IntroWord = ({phrase, variants}) => {
+
+const IntroWord = ({ phrase, index }) => {
+  const customDelay = index + 2.5;
+
   return (
     <motion.span 
       className='intro-text'
-      variants={variants}
+      initial={{ 
+        y: 30,
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+          delay: customDelay,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        y: -10,
+        transition: {
+          duration: 1,
+        },
+      }}
     >
       {phrase}
     </motion.span>
