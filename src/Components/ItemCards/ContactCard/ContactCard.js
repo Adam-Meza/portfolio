@@ -3,19 +3,48 @@ import './ContactCard.css'
 import { motion } from 'framer-motion';
 
 export const ContactCard = () => {
+  const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.4
+      }
+    }
+  }
+
+  const content = {
+    initial: {
+      y: 40
+    },
+    animate: {
+      y: 0,
+      transition: { 
+        duration: .5
+      }
+    },
+    exit: {
+      y: 40
+    }
+  }
+
   return (
-    <div className='contact-wrapper'>
+    <motion.div
+      className='contact-wrapper'
+      variants={container}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+    >
       <div className='contact-container'>
-        <div className='contact-text-container'>
-         <span className='contact-text'>I am available for work</span>
-         <span className='contact-text'>as a software developer or UX/UI designer</span>
-        </div>
+        <motion.div className='contact-text-container'>
+         <motion.span variants={content} className='contact-text'>I am available for work</motion.span>
+         <motion.span variants={content} className='contact-text'>as a software developer or UX/UI designer</motion.span>
+        </motion.div>
         <div className='contact-link-container'>
-          <a href='mailto:adammeza95@gmail.com??subject=Let%27s%20create%20together' className='link contact email'>Email</a>
-          <a href='https://www.linkedin.com/in/adam-meza' className='link contact linkedin'>LinkedIn</a>
-          <a href='https://github.com/Adam-Meza' className='link contact github' >GitHub</a>
+          <motion.a variants={content} href='https://github.com/Adam-Meza' className='link contact github'>GitHub</motion.a>
+          <motion.a variants={content} href='mailto:adammeza95@gmail.com??subject=Let%27s%20create%20together' className='link contact email'>Email</motion.a>
+          <motion.a variants={content} href='https://www.linkedin.com/in/adam-meza' className='link contact linkedin'>LinkedIn</motion.a>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
