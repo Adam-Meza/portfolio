@@ -44,8 +44,9 @@
 }
 
 @media (max-width: 1440px) {
+
   .carousel-container{
-    margin-left: 13%;
+    margin-left: 15%;
   }
 }
 
@@ -54,5 +55,12 @@
     top: 4%;
     font-size: 30px;
     left: 13%;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .carousel-container{
+    margin-left: 2%;
   }
 }

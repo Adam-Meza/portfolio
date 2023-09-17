@@ -1,36 +1,60 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 
-export const IntroName = ({name, handleNav}) => {
-  const slideInVariant = {
-    // initial: {
-    //   translateY: -400,
-    // },
-    // animate: {
-    //   translateY: 0
-    // },
+export const IntroName = ({name, handleNav, variants}) => {
+  const container = {
+    show: {
+      transition: {
+        staggerChildren: .3,
+      },
+    },
+  };
+
+  const letterVariant = {
+    initial: {
+      y: -40,
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: .6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: {
+        duration: 1,
+      },
+    },
   }
 
-  const nameDisplay = name.split()
+  const nameDisplay = name.split('')
                           .map((letter, index) => 
                             <motion.span
-                            key={index}
+                              key={index}
                               className='name'
-                              variants={slideInVariant}
-                              initial='initial'
-                              animate='animate'
+                              variants={letterVariant}
                             >
                               {letter}
                             </motion.span>)
 
   return (
-    <div>
-      <div
+    <motion.div
+      variants={variants}
+    >
+      <motion.div
         className='name-container'
         onClick={() => handleNav("")}
+        variants={container}
+        initial='initial' 
+        animate='show'
+        exit='exit'
       >
         {nameDisplay}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

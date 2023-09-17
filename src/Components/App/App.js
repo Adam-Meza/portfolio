@@ -9,6 +9,7 @@ import { ContactCard } from '../ItemCards/ContactCard/ContactCard';
 import { Switch, Route } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { Header } from '../Header/Header';
+import { motion } from 'framer-motion';
 
 function App() {
   const history = useHistory(),

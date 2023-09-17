@@ -7,19 +7,27 @@ export const DropDown = ({handleNav}) => {
     setOpen(!open)
   }
 
+  const handleLinkClick = (type) => {
+    setOpen(false)
+    handleNav(type)
+  }
+
   return (
     <div className='dropdown-wrapper'>
-      <button className='dropdown-button' onClick={handleClick}>⌄</button>
+      <button className="dropdown-button" onClick={() => handleClick() }>
+        {/* <div class="arrow-line"></div>
+        <div class="arrow-line"></div> */}
+      </button>
       {open &&
         <div className='dropdown'>
           <ul className='link-container'>
-            <li onClick={() => handleNav('programming')} className='link'>programming</li>
-            <li className='link' onClick={() => handleNav('tattoos')}>tattoos</li>
-            <li className='link' onClick={() => handleNav('art')}>art</li>
+            <li onClick={() => handleLinkClick('programming')} className='link'>programming</li>
+            <li className='link' onClick={() => handleLinkClick('tattoos')}>tattoos</li>
+            <li className='link' onClick={() => handleLinkClick('art')}>art</li>
           </ul>
           <ul className='link-container'>
-            <li className='link' onClick={() => handleNav('about')}>about</li>
-            <li className='link' onClick={() => handleNav('contact')}>contact</li>
+            <li className='link' onClick={() => handleLinkClick('about')}>about</li>
+            <li className='link' onClick={() => handleLinkClick('contact')}>contact</li>
           </ul>
 
         </div>}

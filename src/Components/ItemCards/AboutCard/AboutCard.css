@@ -134,3 +134,14 @@
   font-family: 'Bebas Neue', sans-serif;
   border: .5px solid rgb(247, 222, 234);
 }
+
+@media (max-width: 1100px) {
+  .about-card-wrapper {
+    width: 80vw;
+  }
+
+  .about-carousel-container {
+    width: 100vw;
+    margin: 0px;
+  }
+}

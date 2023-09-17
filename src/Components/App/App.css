@@ -43,3 +43,6 @@ a {
  all: unset;
 }
 
+button:hover {
+  cursor: pointer;
+}

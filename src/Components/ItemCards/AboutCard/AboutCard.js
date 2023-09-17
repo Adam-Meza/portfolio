@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react'
 import './AboutCard.css'
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { experience } from '../../../assets/work/work';
-import { CVItemCard } from './CVItemCard';
 
 export const AboutCard = ({ handleNav }) => {
   const targetRef = useRef(null)
@@ -46,11 +45,21 @@ export const AboutCard = ({ handleNav }) => {
                 <span className='link create' onClick={() => handleNav('contact')}>Let's create together</span>
               </div>
             </div>
-
           </motion.div>
-
         </div>
       </div>
     </section>
   )
 }
+
+export const CVItemCard = ({ item }) => {
+  return (
+    <div className='cv-item-wrapper'>
+      <div className='cv-item-container'>
+        <span className='cv-item-title'>{item.title}</span>
+        <span className='cv-item-details'>{item.description}</span>
+      </div>
+    </div>
+  )
+}
+

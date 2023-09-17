@@ -5,16 +5,20 @@ import { motion } from 'framer-motion';
 
 export const IntroCard = () => {
   const container = {
+    intial: {
+      opacity: 0
+    },
     show: {
       transition: {
-        staggerChildren: 0.5, // Use staggerChildren instead of stagger
+        delay: 2,
+        staggerChildren: .8, 
       },
     },
   };
 
   const word = {
-    initial: { // Correct the spelling here
-      y: 50,
+    initial: { 
+      y: 30,
       opacity: 0,
     },
     show: {
@@ -26,7 +30,7 @@ export const IntroCard = () => {
     },
     exit: {
       opacity: 0,
-      y: -50,
+      y: -10,
       transition: {
         duration: 1,
       },
@@ -39,11 +43,21 @@ export const IntroCard = () => {
       <motion.img
         src={face}
         className='intro-img'
+        initial= {{
+          opacity: 0
+        }}
+        animate= {{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            delay: 1.5,
+          }
+        }}
       />
       <motion.p 
         className='intro-text-wrapper'
         variants={container}
-        initial='initial' // Use initial instead of intial
+        initial='initial' 
         animate='show'
         exit='exit'
       >
