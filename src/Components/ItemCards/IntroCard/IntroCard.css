@@ -33,6 +33,7 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
+  overflow: hidden;
 }
 
 .intro-text {

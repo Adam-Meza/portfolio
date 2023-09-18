@@ -40,7 +40,7 @@ export const ContactCard = () => {
          <motion.span variants={content} className='contact-text'>as a software developer or UX/UI designer</motion.span>
         </motion.div>
         <div className='contact-link-container'>
-          <motion.a variants={content} href='https://github.com/Adam-Meza' className='link contact github'>GitHub</motion.a>
+          <motion.a variants={content} href='https://calendly.com/adammeza95/15-minute-chat' className='link contact github'>Calendly</motion.a>
           <motion.a variants={content} href='mailto:adammeza95@gmail.com??subject=Let%27s%20create%20together' className='link contact email'>Email</motion.a>
           <motion.a variants={content} href='https://www.linkedin.com/in/adam-meza' className='link contact linkedin'>LinkedIn</motion.a>
         </div>

@@ -4,12 +4,14 @@
   justify-content: center;
   height: 100vh;
   width: fit-content;
+  overflow: hidden;
 }
 
 .art-details-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .art-title {

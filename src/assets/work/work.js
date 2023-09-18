@@ -44,7 +44,7 @@ export const programming =  [
     details: {
       type: 'Solo',
       hours: '25',
-      stack: ['HTML, ', 'SCSS, ', 'JavaScript'],
+      stack: ['SCSS, ', 'JavaScript'],
     }
   },
   {

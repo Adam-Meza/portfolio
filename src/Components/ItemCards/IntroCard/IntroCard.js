@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 export const IntroCard = () => {
   const container = {
     show: {
-      opacity: 1,
       transition: {
         delay: 2,
         staggerChildren: 0.8, 
@@ -14,21 +13,7 @@ export const IntroCard = () => {
     },
   };
 
-  // const container = {
-  //   animate: {
-  //     transition: {
-  //       staggerChildren: 0.8
-  //     }
-  //   }
-  // }
-
-  // const item = {
-
-
-  // }
-
-
-  const introWords = ['hello world,', 'my name is adam', '& i make art'].map((phrase, index) => {
+  const introWords = ['hello,', 'my name is adam', '&', 'i make art'].map((phrase, index) => {
     return (
       <IntroWord
         key={index}
@@ -60,7 +45,7 @@ export const IntroCard = () => {
         className='intro-text-wrapper'
         variants={container}
         initial='initial' 
-        animate='show'
+        animate='animate'
         exit='exit'
       >
         {introWords}
@@ -78,10 +63,8 @@ const IntroWord = ({ phrase, index }) => {
       className='intro-text'
       initial={{ 
         y: 30,
-        opacity: 0,
       }}
       animate={{
-        opacity: 1,
         y: 0,
         transition: {
           duration: 1,

@@ -19,12 +19,12 @@ export const AboutCard = ({ handleNav }) => {
 
   const itemVariants = {
     initial: {
-      y: 50,
+      y: 60,
     },
     animate: {
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
       },
     },
     exit: {
@@ -34,7 +34,7 @@ export const AboutCard = ({ handleNav }) => {
 
   const CVVariants = {
     initial: {
-      width: "10%",
+      width: "1%",
     },
     animate: {
       width: '100%',
@@ -43,10 +43,6 @@ export const AboutCard = ({ handleNav }) => {
       },
     },
   }
-
-
-
-
 
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-90%'])
 
@@ -90,18 +86,14 @@ export const AboutCard = ({ handleNav }) => {
             </div>
 
             <motion.div className='about-card-wrapper'>
-              <motion.span className='art-quote'> "Arts' meaning is 'owned by no one,</motion.span>
-              <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
-              <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
-              <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
-            </motion.div>
-
-            <div className='about-card-wrapper'>
-              <div className='about-text-container'>
-                <p className='about-text'>In my view, computer programming is a unique artistic medium, which generates levels of meaning through interconnectivity rarely found in other art forms. As a former tattoo artist and sous chef, I bring a depth of artistic experience to each application.</p>
-                <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create together</motion.span>
+              <div className='quote-wrapper'>
+                <motion.span className='art-quote'> "Arts' meaning is 'owned by no one,</motion.span>
+                <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
+                <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
+                <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
               </div>
-            </div>
+              <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create art together</motion.span>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -48,7 +48,7 @@ export const ProgrammingCard = ({ application }) => {
         whileInView={{ opacity: 1, scale: 1 }}
       />
       <div className='app-text-wrapper'>
-        <div>
+        <div className='app-text-container'>
           <h2 className={`app-name ${name}`}>{name}</h2>
           <motion.div className='details-container'
             variants={container}
@@ -56,7 +56,7 @@ export const ProgrammingCard = ({ application }) => {
             animate='animate'>
 
             <div className='hide-overflow'>
-              <motion.span className='detail' initial={{ x: 40 }} whileInView={{ x: 0 }}>{`${details.type} Project`}</motion.span>
+              <motion.span className='detail' initial={{ x: 40 }} whileInView={{ x: 0 }}>{`${details.type}`}</motion.span>
             </div>
             <div className='hide-overflow'>
               <motion.span className='detail' initial={{ y: 40 }} animate={{ y: 0 }} transition={{ duration: 0.5 }} variants={textVariants} >{details.stack}</motion.span>
@@ -77,11 +77,10 @@ export const ProgrammingCard = ({ application }) => {
               </a>
             </div>
           }
-          
+
         </div>
 
         <div className='side-text-wrapper'>
-
           <h3>Abstract</h3>
           <p className='app-text'>{abstract}</p>
           {windowWidth > 1100 &&
