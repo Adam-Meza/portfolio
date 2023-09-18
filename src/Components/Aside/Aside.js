@@ -20,24 +20,6 @@ export const Aside = ({ handleNav }) => {
     },
   };
 
-  const word = {
-    initial: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
   const link = {
     initial: {
       x: -200,
@@ -47,7 +29,8 @@ export const Aside = ({ handleNav }) => {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 1.5,
+        duration: 1.6,
+        ease: [0.3, 0.8, .6, 1]
       },
     },
     exit: {
@@ -68,8 +51,8 @@ export const Aside = ({ handleNav }) => {
         animate='show'
         exit='exit'
       >
-        <IntroName name='ADAM' handleNav={handleNav} variants={word} />
-        <IntroName name='MEZA' handleNav={handleNav} variants={word} />
+        <IntroName name='ADAM' delay={0} handleNav={handleNav}/>
+        <IntroName name='MEZA' delay={1} handleNav={handleNav}/>
         <span className='creative'>
           creative
         </span>

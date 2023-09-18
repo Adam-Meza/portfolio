@@ -5,9 +5,6 @@ import { motion } from 'framer-motion';
 
 export const IntroCard = () => {
   const container = {
-    initial: {
-      opacity: 0
-    },
     show: {
       opacity: 1,
       transition: {
@@ -16,6 +13,20 @@ export const IntroCard = () => {
       },
     },
   };
+
+  // const container = {
+  //   animate: {
+  //     transition: {
+  //       staggerChildren: 0.8
+  //     }
+  //   }
+  // }
+
+  // const item = {
+
+
+  // }
+
 
   const introWords = ['hello world,', 'my name is adam', '& i make art'].map((phrase, index) => {
     return (
@@ -60,7 +71,7 @@ export const IntroCard = () => {
 
 
 const IntroWord = ({ phrase, index }) => {
-  const customDelay = index + 2.5;
+  const delay = index + 2.5;
 
   return (
     <motion.span 
@@ -74,7 +85,7 @@ const IntroWord = ({ phrase, index }) => {
         y: 0,
         transition: {
           duration: 1,
-          delay: customDelay,
+          delay: delay,
         },
       }}
       exit={{

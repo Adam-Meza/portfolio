@@ -1,5 +1,5 @@
 .header {
-  color: white;
+  color: rgb(255, 255, 255);
   height: 50px;
   width: 100%;
   position: fixed;
@@ -8,26 +8,30 @@
   z-index: 3;
   border-bottom: .5px solid  rgb(247, 222, 234);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgba(3, 10, 22, 0.2);
+  backdrop-filter: blur(3px)
 }
 
 .header-name-container {
   display: flex;
-  width: 60%;
-  justify-content: space-evenly;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3%;
 }
 
 .dropdown-button {
   z-index: 1;
   border: .5px solid white;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: none;
   position: fixed;
-  top: .5%;
-  right: 3%;
+  top: .7%;
+  right: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,11 +68,10 @@
 }
 
 .dropdown {
-  color: white;
   z-index: 1;
-  height: 50vh;
-  width: 20vw;
-  background-color: rgb(1, 17, 25);
+  height: 40vh;
+  width: 15rem;
+  background-color: rgb(247, 222, 234);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

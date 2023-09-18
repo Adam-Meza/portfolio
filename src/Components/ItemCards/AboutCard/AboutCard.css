@@ -96,6 +96,7 @@
   font-family: "droid-serif", serif;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .cv-item-details {

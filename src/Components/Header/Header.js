@@ -7,8 +7,8 @@ export const Header = ({handleNav}) => {
   return (
     <header className='header'>
       <div className='header-name-container'>
-        <IntroName name="ADAM" handleNav={handleNav}/>
-        <IntroName name="MEZA" handleNav={handleNav}/>
+        <h1 className='name'>ADAM MEZA</h1>
+        <span className='creative'>creative</span>
       </div>
       <DropDown handleNav={handleNav}/>
     </header>

@@ -21,6 +21,10 @@ body{
   color: white;
 }
 
+.hide-overflow {
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 8px; 
 }

@@ -1,23 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const IntroName = ({ name, handleNav, variants }) => {
+export const IntroName = ({ name, handleNav, variants, delay }) => {
   const container = {
     show: {
       transition: {
-        staggerChildren: .5,
+        delay: delay,
+        staggerChildren: .6,
       },
     },
   };
 
   const letterVariant = {
     initial: {
-      y: -40,
+      y: -60,
     },
     show: {
       y: 0,
       transition: {
-        duration: .6,
+        duration: .7,
+        ease: [0.3, 0.8, .6, 1]
       },
     },
     exit: {
@@ -45,7 +47,7 @@ export const IntroName = ({ name, handleNav, variants }) => {
     <motion.div
       variants={variants}
     >
-      <div className='letter-wrapper'>
+      <div className='hide-overflow'>
 
         <motion.div
           className='name-container'
