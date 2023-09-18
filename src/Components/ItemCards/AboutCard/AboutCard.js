@@ -90,18 +90,10 @@ export const AboutCard = ({ handleNav }) => {
             </div>
 
             <motion.div className='about-card-wrapper'>
-              <div className='hidden-overflow'>
-                <motion.span initial={{x: "100rem"}} className='art-quote'> "Arts' meaning is 'owned by no one,</motion.span>
-              </div>
-              <div className='hidden-overflow'>
-                <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
-              </div>
-              <div className='hidden-overflow'>
-                <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
-              </div>
-              <div className='hidden-overflow'>
-                <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
-              </div>
+              <motion.span className='art-quote'> "Arts' meaning is 'owned by no one,</motion.span>
+              <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
+              <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
+              <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
             </motion.div>
 
             <div className='about-card-wrapper'>

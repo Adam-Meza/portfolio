@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 
 function App() {
   const history = useHistory(),
-        [windowWidth, setWidth] = useState(window.innerWidth)
+        [windowWidth, setWidth] = useState(window.innerWidth);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
@@ -33,7 +33,7 @@ function App() {
       behavior: 'smooth'
     });
 
-    history.push(`/${route}`)
+    history.push(`/${route}`);
   };
 
   return (

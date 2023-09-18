@@ -146,3 +146,26 @@
     margin: 0px;
   }
 }
+
+@media (max-width: 1100px) {
+  .cv-skill-container {
+    font-size: 24px;
+  }
+
+  .about-carousel-container {
+    margin-left: 0px;
+    align-items: flex-start;
+  }
+
+  .about-card-wrapper {
+    padding: 0px;
+  }
+
+  .cv-wrapper{
+    width: 90%;
+  }
+
+  .about-card-wrapper {
+    width: 100vw;
+  }
+}

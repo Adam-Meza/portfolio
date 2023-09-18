@@ -10,13 +10,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(3, 10, 22, 0.2);
+  background-color: rgba(77, 86, 102, 0.1);
   backdrop-filter: blur(3px)
 }
 
 .header-name-container {
   display: flex;
-  width: 40%;
+  width: 23rem;
   justify-content: space-between;
   align-items: center;
   margin-left: 3%;
@@ -24,13 +24,13 @@
 
 .dropdown-button {
   z-index: 1;
-  border: .5px solid white;
+  border: 1px solid white;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   background: none;
   position: fixed;
-  top: .7%;
+  top: 14%;
   right: 2%;
   display: flex;
   flex-direction: column;

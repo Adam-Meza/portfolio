@@ -1,10 +1,14 @@
 .programming-card-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 80vw;
+  justify-content: flex-start;
+  width: 90vw;
   height: 75vh;
   overflow: hidden;
+}
+
+.programming-image {
+  height: 72vh;
 }
 
 .app-text-wrapper {
@@ -99,9 +103,9 @@ h3 {
   background-color: rgb(244, 212, 228);
 }
 
-@media (max-width: 1300px) {
-  .carousel-item {
-    height: 60vh;
+@media (max-width: 1700px) {
+  .programming-image {
+    height: 65vh;
   }
 
   .app-name {
@@ -118,5 +122,76 @@ h3 {
 
   .programming-card-wrapper {
     width: 90vw;
+  }
+}
+
+@media (max-width: 1440px) {
+  .programming-image {
+    height: 55vh;
+  }
+
+  .app-name {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .app-text {
+    font-size: 14px;
+  }
+
+  .programming-card-wrapper {
+    justify-content: center;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .programming-image {
+    height: 50vh;
+  }
+
+  .programming-card-wrapper {
+    width: 87vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .programming-card-wrapper {
+    flex-direction: column;
+  }
+
+  .app-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 30vh;
+    align-items: center;
+  }
+
+  .side-text-wrapper {
+    width: 40%;
+  }
+
+  .programming-image {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .programming-image {
+    height: 37vh;
+  }
+
+  .app-name {
+    font-size: 28px;
+  }
+
+  .programming-card-wrapper {
+    width: 100vw;
   }
 }
