@@ -7,34 +7,19 @@ export const IntroCard = () => {
   const container = {
     show: {
       transition: {
-        delayChildren: 3,
-        staggerChildren: 3, 
+        delay: 2,
+        staggerChildren: 0.8, 
       },
     },
   };
 
-  const item = {
-    initial: {
-      y: 30,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: .4
-      }
-    }
-  }
-
   const introWords = ['hello,', 'my name is adam', '&', 'i make art'].map((phrase, index) => {
     return (
-      <motion.span
-        className='intro-text'
+      <IntroWord
         key={index}
         phrase={phrase}
-        variants={item}
-      > 
-        {phrase}
-      </motion.span>
+        index={index}
+      />
     );
   });
 
@@ -63,8 +48,38 @@ export const IntroCard = () => {
         animate='animate'
         exit='exit'
       >
-        {/* {introWords} */}
+        {introWords}
       </motion.p>
     </div>
+  );
+};
+
+
+const IntroWord = ({ phrase, index }) => {
+  const delay = (index * .3) + 3;
+
+  return (
+    <motion.span 
+      className='intro-text'
+      initial={{ 
+        y: 30,
+      }}
+      animate={{
+        y: 0,
+        transition: {
+          duration: .7,
+          delay: delay,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        y: -10,
+        transition: {
+          duration: 1,
+        },
+      }}
+    >
+      {phrase}
+    </motion.span>
   );
 };

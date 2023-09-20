@@ -23,7 +23,7 @@ export const Aside = ({ handleNav }) => {
 
   const link = {
     initial: {
-      x: -120,
+      x: -130,
     },
     show: {
       x: 0,
