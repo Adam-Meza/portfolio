@@ -7,7 +7,7 @@ export const Aside = ({ handleNav }) => {
   const wrapper = {
     show: {
       transition: {
-        staggerChildren: 1,
+        staggerChildren: .25,
       },
     },
   };
@@ -15,22 +15,20 @@ export const Aside = ({ handleNav }) => {
   const container = {
     show: {
       transition: {
-        staggerChildren: 0.8,
+        delayChildren: 1.2,
+        staggerChildren: 0.35,
       },
     },
   };
 
   const link = {
     initial: {
-      x: -200,
-      opacity: 0,
+      x: -120,
     },
     show: {
       x: 0,
-      opacity: 1,
       transition: {
-        duration: 1.6,
-        ease: [0.3, 0.8, .6, 1]
+        duration: .9,
       },
     },
     exit: {
@@ -51,7 +49,7 @@ export const Aside = ({ handleNav }) => {
         animate='show'
         exit='exit'
       >
-        <IntroName name='ADAM' delay={0} handleNav={handleNav}/>
+        <IntroName name='ADAM' delay={.3} handleNav={handleNav}/>
         <IntroName name='MEZA' delay={1} handleNav={handleNav}/>
         <span className='creative'>
           creative

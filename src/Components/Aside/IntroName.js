@@ -5,8 +5,8 @@ export const IntroName = ({ name, handleNav, variants, delay }) => {
   const container = {
     show: {
       transition: {
-        delay: delay,
-        staggerChildren: .6,
+        delayChildren: delay,
+        staggerChildren: .2,
       },
     },
   };
@@ -18,8 +18,7 @@ export const IntroName = ({ name, handleNav, variants, delay }) => {
     show: {
       y: 0,
       transition: {
-        duration: .7,
-        ease: [0.3, 0.8, .6, 1]
+        duration: .5,
       },
     },
     exit: {

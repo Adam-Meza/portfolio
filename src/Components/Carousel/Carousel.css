@@ -69,7 +69,10 @@
   .scroll-text {
     font-size: 20px;
     top: 5%;
-    left: 10%;
+    left: 4%;
   }
 
+  .carousel-interior {
+    height: 86vh;
+  }
 }

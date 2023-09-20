@@ -12,7 +12,7 @@ export const AboutCard = ({ handleNav }) => {
   const containerVariants = {
     animate: {
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   }
@@ -42,7 +42,7 @@ export const AboutCard = ({ handleNav }) => {
         duration: 4,
       },
     },
-  }
+  };
 
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-90%'])
 
@@ -87,12 +87,20 @@ export const AboutCard = ({ handleNav }) => {
 
             <motion.div className='about-card-wrapper'>
               <div className='quote-wrapper'>
-                <motion.span className='art-quote'> "Arts' meaning is 'owned by no one,</motion.span>
+                <div className='hide-overflow'>
+                  <motion.span
+                    className='art-quote'
+                    initial={{opacity:0}}
+                    whileInView={{opacity:1, delay: 1}}
+                  > 
+                  "Arts' meaning is 'owned by no one,
+                  </motion.span>
+                </div>
                 <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
                 <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
                 <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
               </div>
-              <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create art together</motion.span>
+              <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create</motion.span>
             </motion.div>
           </motion.div>
         </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import './ArtCard.css'
+import React from 'react';
+import './ArtCard.css';
 import { motion } from 'framer-motion';
 
 export const ArtCard = ({item}) => {
@@ -11,20 +11,20 @@ export const ArtCard = ({item}) => {
         staggerChildren: .4
       }
     }
-  }
+  };
 
   const itemVariants = {
     initial: {
-      y: 30
+      scale: .9,
     },
     show: {
-      y: 0,
+      scale: 1,
       transition: {
         duration: .5,
         ease: "easeIn"
       }
     }
-  }
+  };
 
   return (
     <section className='art-card-wrapper'>
@@ -48,4 +48,4 @@ export const ArtCard = ({item}) => {
       </motion.div>
     </section>
   )
-}
+};

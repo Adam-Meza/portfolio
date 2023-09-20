@@ -1,6 +1,6 @@
 import hyperLoom from '../images/pixels-hyperloom.jpg'
 import nectr from '../images/pixels-nectr.jpg'
-import bordle from '../images/pixels-birdle.jpg'
+import bordle from '../images/pixels-bordle.jpg'
 import wander from '../images/pixels-wander.jpg'
 import strawberry from '../images/tattoo-strawberry.jpg'
 import tattooHand from '../images/tattoo-hand.jpg'
@@ -21,6 +21,10 @@ import orange from '../images/2D-orange.jpg'
 import newBalance from '../images/2D-newBalance.jpg'
 import newBalance2 from '../images/2D-newBalance2.jpg'
 import sarah from '../images/2D-sarah.jpg'
+import { FaReact, FaJs, FaCss3, FaHtml5 } from 'react-icons/fa';
+import { TbBrandCypress } from 'react-icons/tb'
+import { FaSass } from 'react-icons/fa'
+import { SiMocha, SiChai, SiTypescript } from 'react-icons/si'
 
 export const programming =  [
   {
@@ -32,32 +36,32 @@ export const programming =  [
     details: {
       type: 'Group',
       hours: '60',
-      stack: ["React, ", "Redux"],
+      stack: [<FaReact/>, <FaCss3/>, <FaHtml5/>, <FaJs />, <TbBrandCypress />],
       }
     },
   {
     name: 'wander',
     img: wander,
-    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during my time at Turing. Wander served as an exercise in routing with JavaScript, designing UI, and hosting information locally.',
+    abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during the second module at Turing. Wander served as an exercise in routing with JavaScript, designing UI using SASS/SCSS, and hosting information locally.',
     repo: 'https://github.com/Adam-Meza/Travel-Tracker',
     deployment: '',
     details: {
       type: 'Solo',
       hours: '25',
-      stack: ['SCSS, ', 'JavaScript'],
+      stack: [  <FaJs />, <FaCss3/>, <FaHtml5/>, <FaSass />, <SiChai />, <SiMocha />]
     }
   },
   {
     name: 'boredle',
     img: bordle,
-    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native).',
+    abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native), working in a fast pased enviorment and mobile deplpoyment.',
     repo: 'https://www.google.com/url?q=https://github.com/Adam-Meza/boredle&sa=D&source=docs&ust=1694356983830676&usg=AOvVaw2abIkSFKWqt9_Ym3M52GCh',
     stack: ['React Native'],
     deployment: '',
     details: {
       type: 'Solo',
       hours: '16',
-      stack: ['React Native'],
+      stack: [<FaReact/>, <FaCss3/>, <FaHtml5/>, <FaJs />],
     }
   },
   {
@@ -70,7 +74,7 @@ export const programming =  [
     details: {
       type: 'Solo',
       hours: '30',
-      stack: ['React, ', 'TypeScript'],
+      stack: [<SiTypescript/>, <FaReact/>, <FaCss3/>, <FaHtml5/>, <TbBrandCypress />],
     }
   }
 ]
