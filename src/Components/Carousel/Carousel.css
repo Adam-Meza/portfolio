@@ -4,6 +4,7 @@
 }
 
 .carousel-wrapper {
+  scroll-snap-type: both mandatory;
   position: relative;
   height: 150vh;
   max-width: 100%;
@@ -21,7 +22,7 @@
   top: 4%;
   left: 11%;
   height: 100px;
-  color: rgb(247, 222, 234)
+  color: rgb(255, 145, 0);
 }
 
 .carousel-container {
@@ -45,7 +46,7 @@
 
 @media (max-width: 1440px) {
   .carousel-container{
-    margin-left: 13%;
+    margin-left: 12%;
   }
 
   .scroll-text{
@@ -55,15 +56,15 @@
 
 @media (max-width: 1440px) and (max-height: 670px){
   .scroll-text {
-    top: 4%;
+    bottom: 0;
     font-size: 30px;
-    left: 13%;
+    left: 15%;
   }
 }
 
 @media (max-width: 1100px) {
   .carousel-container{
-    margin-left: 2%;
+    margin-left: 6%;
   }
 
   .scroll-text {

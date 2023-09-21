@@ -72,13 +72,10 @@
 }
 
 @media (max-width: 500px) {
-  .contact-wrapper{
-    height: 60vh;
-  }
   
   .contact-container {
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 13rem;
     padding: 3rem;
   }
 

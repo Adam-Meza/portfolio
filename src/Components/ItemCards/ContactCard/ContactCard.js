@@ -7,9 +7,9 @@ export const ContactCard = () => {
     animate: {
       transition: {
         staggerChildren: 0.4
-      }
-    }
-  }
+      },
+    },
+  };
 
   const content = {
     initial: {
@@ -24,7 +24,7 @@ export const ContactCard = () => {
     exit: {
       y: 40
     }
-  }
+  };
 
   return (
     <motion.div
@@ -47,4 +47,4 @@ export const ContactCard = () => {
       </div>
     </motion.div>
   )
-}
+};

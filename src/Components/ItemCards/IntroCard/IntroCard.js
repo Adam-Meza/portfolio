@@ -1,5 +1,5 @@
 import React from 'react';
-import face from '../../../assets/images/face.jpg';
+import face from '../../../assets/images/possible3.png';
 import "./IntroCard.css";
 import { motion } from 'framer-motion';
 
@@ -67,7 +67,7 @@ const IntroWord = ({ phrase, index }) => {
       animate={{
         y: 0,
         transition: {
-          duration: .7,
+          duration: .8,
           delay: delay,
         },
       }}

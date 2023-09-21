@@ -9,8 +9,8 @@ export const ArtCard = ({item}) => {
     show: {
       transition: {
         staggerChildren: .4
-      }
-    }
+      },
+    },
   };
 
   const itemVariants = {
@@ -38,13 +38,14 @@ export const ArtCard = ({item}) => {
       />
       </div>
       <motion.div
-        variants={container} 
+        variants={container}
+        viewport={{ once: true }}
         initial='initial'
         whileInView="show"
         className='art-details-container'
       >
-        <motion.span variants={itemVariants}className='art-title'>{title}</motion.span>
-        {year && <motion.span variants={itemVariants}className='art-year'>( {year} )</motion.span>}
+        <motion.span variants={itemVariants} viewport={{ once: true }} className='art-title'>{title}</motion.span>
+        {year && <motion.span variants={itemVariants} viewport={{ once: true }} className='art-year'>( {year} )</motion.span>}
       </motion.div>
     </section>
   )

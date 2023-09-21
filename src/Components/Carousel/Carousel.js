@@ -7,13 +7,13 @@ import { ProgrammingCard } from '../ItemCards/ProgrammingCard/ProgrammingCard';
 
 export const Carousel = ({content}) => {
   const targetRef = useRef(null),
-        [display, setDisplay] = useState(null)
+        [display, setDisplay] = useState(null);
   const {scrollYProgress} = useScroll({
     target: targetRef
-  }) 
+  });
   
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"])
-  const scrollTextOpacity = useTransform(scrollYProgress, [0, 0.10], [1, 0])
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
+  const scrollTextOpacity = useTransform(scrollYProgress, [0, 0.10], [1, 0]);
 
   useEffect(()=> {
     let displayElement
@@ -22,10 +22,10 @@ export const Carousel = ({content}) => {
       displayElement = content.map((item, index) => <ProgrammingCard application={item} key={index}/>);
     } else if (content === tattoos || content === art) {
       displayElement = content.map((item, index) => <ArtCard item={item} key={index}/> );
-    }
+    };
 
-    setDisplay(displayElement)
-  }, [content])
+    setDisplay(displayElement);
+  }, [content]);
 
 
   return (
@@ -39,6 +39,5 @@ export const Carousel = ({content}) => {
         </div>
       </section>
     </div>
-
-  )
-}
+  );
+};

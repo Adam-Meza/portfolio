@@ -2,31 +2,29 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 90vw;
-  height: 75vh;
+  width: 100vw;
+  height: fit-content;
   overflow: hidden;
+  scroll-snap-align: center;
 }
 
 .programming-image {
   height: 72vh;
 }
 
+.mobile-img {
+  width: 18vw;
+}
+
 .app-text-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   width: 23vw;
-  height: 85%;
-  margin-left: 3%;
+  height: 80vh;
   font-family: "droid-serif", serif;
   font-weight: 200;  
-}
-
-.app-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
 }
 
 .nectr {
@@ -69,28 +67,27 @@ h3 {
   overflow: hidden;
   border-bottom: .5px solid rgb(247, 222, 234);
   margin: 10px 0px;
-  width: 100%;
+  width: 90%;
 }
 
 .button-container {
-  margin: 20px 10px;
   display: flex;
   justify-content: space-evenly;
-  width: 90%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .app-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
   font-family: "droid-serif", serif;
   padding: 1px 8px;
   height: 40px;
   color: white;
   border:none;
-  background-color: black;
   border: solid .5px rgb(247, 222, 234);
 }
 
@@ -112,7 +109,7 @@ h3 {
 .app-link:hover {
   cursor: pointer;
   background-color: rgb(247, 222, 234);
-  color: #f2c1e8;
+  color: rgb(1, 17, 25);
 }
 
 .app-link:active {
@@ -143,8 +140,7 @@ h3 {
 
 @media (max-width: 1440px) {
   .programming-image {
-    height: auto;
-    width: 55vw;
+    height: 80vh;
   }
 
   .app-name {
@@ -160,8 +156,8 @@ h3 {
   }
 
   .programming-card-wrapper {
-    justify-content: center;
-    width: 80vw;
+    justify-content: flex-start;
+    width: 100vw;
   }
 }
 

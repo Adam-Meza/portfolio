@@ -1,6 +1,9 @@
 import hyperLoom from '../images/pixels-hyperloom.jpg'
 import nectr from '../images/pixels-nectr.jpg'
 import bordle from '../images/pixels-bordle.jpg'
+import hyperLoomMobile from '../images/pixels-hyperloom-mobile.jpg'
+import nectrMobile from '../images/pixels-nectr-mobile.jpg'
+import bordleMobile from '../images/pixels-bordle-mobile.jpg'
 import wander from '../images/pixels-wander.jpg'
 import strawberry from '../images/tattoo-strawberry.jpg'
 import tattooHand from '../images/tattoo-hand.jpg'
@@ -26,19 +29,34 @@ import { TbBrandCypress } from 'react-icons/tb'
 import { FaSass } from 'react-icons/fa'
 import { SiMocha, SiChai, SiTypescript } from 'react-icons/si'
 
-export const programming =  [
+export const programming = [
   {
     name: 'HYPERLOOM',
     img: hyperLoom,
-    abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds. It was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",   
+    mobile: hyperLoomMobile,
+    abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds. It was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",
     repo: 'https://github.com/The-Never-Ending-Story/front-end',
     deployment: 'https://hyper-loom-explorer.vercel.app/',
     details: {
       type: 'Group',
       hours: '60',
-      stack: [<FaReact/>, <FaCss3/>, <FaHtml5/>, <FaJs />, <TbBrandCypress />],
-      }
-    },
+      stack: [<FaReact />, <FaCss3 />, <FaHtml5 />, <FaJs />, <TbBrandCypress />],
+    }
+  },
+  {
+    name: 'nectr',
+    img: nectr,
+    mobile: nectrMobile,
+    abstract: 'Nectr is a web-based Spelling Bee Proxy application. It was built as the final solo project during the third module of Turing. It uses the Free Bee AP.',
+    repo: 'https://github.com/Adam-Meza/nectr-app',
+    stack: ['React', 'TypeScript'],
+    deployment: 'https://nectr-game-app.vercel.app/',
+    details: {
+      type: 'Solo',
+      hours: '30',
+      stack: [<SiTypescript />, <FaReact />, <FaCss3 />, <FaHtml5 />, <TbBrandCypress />],
+    }
+  },
   {
     name: 'wander',
     img: wander,
@@ -48,12 +66,13 @@ export const programming =  [
     details: {
       type: 'Solo',
       hours: '25',
-      stack: [  <FaJs />, <FaCss3/>, <FaHtml5/>, <FaSass />, <SiChai />, <SiMocha />]
+      stack: [<FaJs />, <FaCss3 />, <FaHtml5 />, <FaSass />, <SiChai />, <SiMocha />]
     }
   },
   {
     name: 'boredle',
     img: bordle,
+    mobile: bordleMobile,
     abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native), working in a fast pased enviorment and mobile deplpoyment.',
     repo: 'https://www.google.com/url?q=https://github.com/Adam-Meza/boredle&sa=D&source=docs&ust=1694356983830676&usg=AOvVaw2abIkSFKWqt9_Ym3M52GCh',
     stack: ['React Native'],
@@ -61,22 +80,9 @@ export const programming =  [
     details: {
       type: 'Solo',
       hours: '16',
-      stack: [<FaReact/>, <FaCss3/>, <FaHtml5/>, <FaJs />],
+      stack: [<FaReact />, <FaCss3 />, <FaHtml5 />, <FaJs />],
     }
   },
-  {
-    name: 'nectr',
-    img: nectr,
-    abstract: 'Nectr is a web-based Spelling Bee Proxy application. It was built as the final solo project during the third module of Turing. It uses the Free Bee AP.',
-    repo: 'https://github.com/Adam-Meza/nectr-app',
-    stack: ['React', 'TypeScript'],
-    deployment: 'https://nectr-game-app.vercel.app/',
-    details: {
-      type: 'Solo',
-      hours: '30',
-      stack: [<SiTypescript/>, <FaReact/>, <FaCss3/>, <FaHtml5/>, <TbBrandCypress />],
-    }
-  }
 ]
 
 export const tattoos = [
@@ -112,12 +118,12 @@ export const art = [
     img: body1,
     title: 'Nudes in Blue #12',
     year: '2020'
-  }, 
+  },
   {
     img: clouds,
     title: 'Cloud',
     year: '2020'
-  }, 
+  },
   {
     img: hands,
     title: 'is this good enough for you?',
@@ -132,37 +138,37 @@ export const art = [
     img: rihanna,
     title: 'Are you feeling it yet Mr. Crabs?',
     year: '2020'
-  }, 
+  },
   {
     img: newBalance,
     title: '991.7 mock up',
     year: '2023'
-  }, 
+  },
   {
     img: newBalance2,
     title: '991.7 mock up #2',
     year: '2023'
-  }, 
+  },
   {
     img: body3,
     title: 'Nudes in Blue #9',
     year: '2020'
-  }, 
+  },
   {
     img: orange,
     title: 'Paradise',
     year: '2020'
-  }, 
+  },
   {
     img: sarah,
     title: 'Adaptation',
     year: '2020'
-  },  
+  },
   {
     img: birds,
     title: 'Cover for Sean Nagel',
     year: '2021'
-  }, 
+  },
   {
     img: corona,
     title: 'Love in the Time of Coronavirus',

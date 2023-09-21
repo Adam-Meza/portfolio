@@ -41,10 +41,17 @@ li {
 
 .name {
   text-align: center;
-  margin: 0px 0px 0px 0px;
-  font-size: 42px;
+  margin: 0px;
   letter-spacing: 10px;
   font-family: 'Bebas Neue', sans-serif;
+}
+
+.large {
+  font-size: 42px;
+}
+
+.small {
+  font-size: 20px;
 }
 
 .letter-wrapper {
@@ -56,7 +63,7 @@ li {
 }
 
 .creative {
-  color: rgb(247, 222, 234);
+  color: rgb(255, 145, 0);
   margin-top: 0px;
   font-size: 20px;
   letter-spacing: 4px;
@@ -72,7 +79,7 @@ li {
 }
 
 .link:hover, .name-wrapper:hover {
-  color: rgb(247, 222, 234);
+  color: rgb(255, 145, 0);
   font-style: italic;
   cursor: pointer;
 }
@@ -83,7 +90,7 @@ li {
 
 
 @media (max-width: 1100px) {
-  .name {
+  .large {
     font-size: 30px;
   }
 

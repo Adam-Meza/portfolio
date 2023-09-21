@@ -14,23 +14,35 @@ export const DropDown = ({ handleNav }) => {
     handleNav(type);
   };
 
+  const wrapper = {
+    animate: {
+      transition: {
+        staggerChildren: 0.8
+      },
+    },
+  };
+
+  
+
   const buttonVariants = {
+    closed: { rotate: 0},
     open: { rotate: -180 },
-    closed: { rotate: 0 },
   };
 
   const dropdownVariants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: -50 },
+    closed: { scaleY: 0 },
+    open: { scaleY: 1 },
+    exit: {scaleY : 0}
   };
 
-  const container = {
-    aniamte: {
+  const dropDownContainer = {
+    animate: {
       transition: {
+        delayChildren: 1,
         staggerChildren: 0.2
       }
-    }
-  }
+    },
+  };
 
   const link = {
     initial: {
@@ -43,10 +55,11 @@ export const DropDown = ({ handleNav }) => {
         ease: 'easeIn'
       }
     }
-  }
+  };
 
   return (
-    <div className='dropdown-wrapper'>
+    <motion.div
+      className='dropdown-wrapper'>
       <motion.button
         className="dropdown-button"
         onClick={() => handleClick()}
@@ -62,7 +75,7 @@ export const DropDown = ({ handleNav }) => {
         variants={dropdownVariants}
       >
         <motion.ul
-          variants={container}
+          variants={dropDownContainer}
           initial="initial"
           whileInView="animate"
           className='header-link-container'
@@ -83,7 +96,11 @@ export const DropDown = ({ handleNav }) => {
             </motion.li>
           </div>
         </motion.ul>
-        <motion.ul variants={container} initial="initial" animate="animate" className='header-link-container'>
+        <motion.ul
+          variants={dropDownContainer}
+          initial="initial"
+          animate="animate"
+          className='header-link-container'>
           <div className='hide-overflow'>
             <motion.li variants={link}className='header-link' onClick={() => handleLinkClick('about')}>
               about
@@ -96,6 +113,6 @@ export const DropDown = ({ handleNav }) => {
           </div>
         </motion.ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

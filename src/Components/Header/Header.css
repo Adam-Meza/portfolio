@@ -1,4 +1,5 @@
 .header {
+  transform-origin: top;
   color: rgb(255, 255, 255);
   height: 45px;
   width: 100%;
@@ -6,11 +7,11 @@
   top: 0;
   left: 0;
   z-index: 3;
-  border-bottom: .5px solid  rgb(247, 222, 234);
+  border-bottom: .5px solid  rgb(255, 145, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(77, 86, 102, 0.1);
+  background-color: rgba(46, 78, 54, 0.123);
   backdrop-filter: blur(3px)
 }
 
@@ -23,14 +24,11 @@
 }
 
 .header-creative {
-  color: rgb(247, 222, 234);
+  color: rgb(255, 145, 0);
   font-size: 16px;
 }
 
 .header-name {
-  font-family: 'Bebas Neue', sans-serif;
-  text-align: center;
-  margin: 0px 0px 0px 10px;
   font-size: 20px;
   letter-spacing: 5px;
 }
@@ -62,20 +60,20 @@
 }
 
 .dropdown {
+  transform-origin: top;
   z-index: 1;
   height: 60vh;
   width: 15rem;
-  background-color: rgb(247, 222, 234);
+  background-color: rgb(255, 145, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-end;
-
 }
 
 .dropdown-button:hover {
   cursor: pointer;
-  border: solid 1px rgb(247, 222, 234);
+  border: solid 1px rgb(255, 145, 0);
 }
 
 .header-link-container {
@@ -87,10 +85,6 @@
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-}
-
-.header-link {
-  color: rgb(49, 101, 149);
 }
 
 .header-link:hover {

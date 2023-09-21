@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const IntroName = ({ name, handleNav, variants, delay }) => {
+export const IntroName = ({ name, handleNav, variants, delay, sizeClass }) => {
   const container = {
     show: {
       transition: {
@@ -33,7 +33,7 @@ export const IntroName = ({ name, handleNav, variants, delay }) => {
     .map((letter, index) =>
       <motion.span
         key={index}
-        className='name'
+        className={`name ${sizeClass}`}
         variants={letterVariant}
       >
         {letter}

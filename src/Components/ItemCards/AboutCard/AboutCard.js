@@ -1,13 +1,19 @@
-import React, { useRef, useState, useEffect } from 'react'
-import './AboutCard.css'
-import { useScroll, motion, useTransform } from 'framer-motion'
-import { experience } from '../../../assets/work/work'
+import React, { useRef, useState, useEffect } from 'react';
+import './AboutCard.css';
+import { useScroll, motion, useTransform } from 'framer-motion';
+import { experience } from '../../../assets/work/work';
 
 export const AboutCard = ({ handleNav }) => {
-  const targetRef = useRef(null)
+  const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-  })
+  });
+
+  const quotes = [
+    `"Arts' meaning is owned by no one,`,
+    "but subsists between [artist and spectator],",
+    `excluding any uniform transmission, any identity of cause and effect."`,
+  ];
 
   const containerVariants = {
     animate: {
@@ -30,7 +36,7 @@ export const AboutCard = ({ handleNav }) => {
     exit: {
       y: 40,
     },
-  }
+  };
 
   const CVVariants = {
     initial: {
@@ -44,9 +50,8 @@ export const AboutCard = ({ handleNav }) => {
     },
   };
 
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-90%'])
-
-  const cvCards = experience.map((item) => <CVItemCard variants={itemVariants} key={item.title} item={item} />)
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-90%']);
+  const cvCards = experience.map((item) => <CVItemCard variants={itemVariants} key={item.title} item={item} />);
 
   return (
     <motion.section
@@ -85,37 +90,43 @@ export const AboutCard = ({ handleNav }) => {
               </div>
             </div>
 
-            <motion.div className='about-card-wrapper'>
+            <motion.div className='about-card-wrapper'
+              variants={containerVariants}
+              initial='initial'
+              whileInView='animate'
+              transition={{delayChildren: 1}}
+            >
               <div className='quote-wrapper'>
-                <div className='hide-overflow'>
-                  <motion.span
-                    className='art-quote'
-                    initial={{opacity:0}}
-                    whileInView={{opacity:1, delay: 1}}
-                  > 
-                  "Arts' meaning is 'owned by no one,
-                  </motion.span>
-                </div>
-                <motion.span className='art-quote'>but subsists between [artist and spectator],</motion.span>
-                <motion.span className='art-quote'>excluding any uniform transmission, any identity of cause and effect.'"</motion.span>
-                <motion.span className='jacques'>(Jacques Ranciere, paraphrased)</motion.span>
+                {quotes.map((quote, index) => (<QuoteCard variants={itemVariants} index={index} quote={quote}/>))}
               </div>
               <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create</motion.span>
             </motion.div>
+
+
           </motion.div>
         </div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export const CVItemCard = ({ item, variants }) => {
+const CVItemCard = ({ item, variants }) => {
   return (
     <div className='cv-item-wrapper'>
       <div className='cv-item-container'>
         <motion.span variants={variants} className='cv-item-title'>{item.title}</motion.span>
         <motion.span variants={variants} className='cv-item-details'>{item.description}</motion.span>
       </div>
+    </div>
+  );
+};
+
+const QuoteCard = ({quote, index, variants}) => {
+  return (
+    <div className='hide-overflow' >
+      <motion.div className='art-quote' variants={variants} key={index}>
+        {quote}
+      </motion.div>
     </div>
   )
 }

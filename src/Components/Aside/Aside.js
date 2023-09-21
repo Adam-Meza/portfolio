@@ -49,8 +49,8 @@ export const Aside = ({ handleNav }) => {
         animate='show'
         exit='exit'
       >
-        <IntroName name='ADAM' delay={.3} handleNav={handleNav}/>
-        <IntroName name='MEZA' delay={1} handleNav={handleNav}/>
+        <IntroName name='ADAM' delay={.3} handleNav={handleNav} sizeClass="large"/>
+        <IntroName name='MEZA' delay={1} handleNav={handleNav} sizeClass="large"/>
         <span className='creative'>
           creative
         </span>
