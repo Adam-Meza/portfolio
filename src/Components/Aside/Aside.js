@@ -1,17 +1,10 @@
 import React from 'react';
 import './Aside.css';
 import { IntroName } from './IntroName';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { staggerContainerVariants } from '../../utilites';
 
 export const Aside = ({ handleNav }) => {
-  const wrapper = {
-    show: {
-      transition: {
-        staggerChildren: .25,
-      },
-    },
-  };
-
   const container = {
     show: {
       transition: {
@@ -44,7 +37,7 @@ export const Aside = ({ handleNav }) => {
       <motion.div
         className='name-wrapper'
         onClick={() => handleNav('')}
-        variants={wrapper}
+        variants={staggerContainerVariants}
         initial='initial'
         animate='show'
         exit='exit'
@@ -55,7 +48,7 @@ export const Aside = ({ handleNav }) => {
           creative
         </span>
       </motion.div>
-      <motion.div className='link-wrapper' variants={container} initial='initial' animate='show' exit='exit'>
+      <motion.nav className='link-wrapper' variants={container} initial='initial' animate='show' exit='exit'>
         <ul className='link-container'>
           <Link medium='programming' variants={link} handleNav={handleNav} />
           <Link medium='tattoos' variants={link} handleNav={handleNav} />
@@ -65,7 +58,7 @@ export const Aside = ({ handleNav }) => {
           <Link medium='about' variants={link} handleNav={handleNav} />
           <Link medium='contact' variants={link} handleNav={handleNav} />
         </ul>
-      </motion.div>
+      </motion.nav>
     </aside>
   );
 };

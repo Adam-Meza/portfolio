@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ArtCard.css';
 import { motion } from 'framer-motion';
+import { hiddenMask, visibleMask } from '../../../utilites';
 
-export const ArtCard = ({item}) => {
-  const {img, title, year} = item;
-  
+export const ArtCard = ({ item }) => {
+  const { img, title, year } = item;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
   const container = {
     show: {
       transition: {
@@ -29,13 +32,24 @@ export const ArtCard = ({item}) => {
   return (
     <section className='art-card-wrapper'>
       <div className='hide-overflow'>
-      <motion.img
-        src={img}
-        className='art-item'
-        initial={{x: -30}}
-        whileInView={{x: 0}}
-        transition={{duration: .5, once: true}}
-      />
+
+        <motion.div
+          initial={false}
+          whileInView={
+            isLoaded && isInView
+              ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+              : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+          }
+          transition={{ duration: 1.5, delay: .3 }}
+          viewport={{ once: true }}
+          onViewportEnter={() => setIsInView(true)}
+        >
+          <motion.img
+            src={img}
+            className='art-item'
+            onLoad={()=> setIsLoaded(true)}
+          />
+        </motion.div>
       </div>
       <motion.div
         variants={container}

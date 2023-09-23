@@ -1,7 +1,6 @@
 aside {
   height: 45vh;
-  width: 8%;
-  min-width: 400px;
+  width: 11%;
   margin-left:1%;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,7 @@ aside {
 
 li {
   all: unset;
+  width: fit-content;
   font-size: 19px;
   font-family: "droid-serif", serif;
   color: rgb(255, 255, 255);
@@ -84,8 +84,16 @@ li {
   cursor: pointer;
 }
 
+.name-container:hover {
+  cursor: pointer;
+}
+
 .link:hover {
-  letter-spacing: 3px;
+  border-bottom: 1px solid rgb(255, 145, 0);
+}
+
+.link:hover {
+  letter-spacing: 1px;
 }
 
 
@@ -98,3 +106,8 @@ li {
     width: 30%;
   }
 }
+
+
+
+
+

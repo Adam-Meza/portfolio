@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './ProgrammingCard.css';
-import { motion } from 'framer-motion';
-import ProgrammingCardMobile from './ProgrammingCardMobile'
-
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+import { motion, AnimatePresence } from 'framer-motion';
+import { ProgrammingCardMobile } from './Mobile/ProgrammingCardMobile'
+import { hiddenMask, staggerContainerVariants, visibleMask } from '../../../utilites';
+import { dropdownVariants } from '../../../utilites';
+import { FaTimes } from 'react-icons/fa';
 
 export const ProgrammingCard = ({ application }) => {
-  const { name, img, abstract, repo, deployment, details, mobile } = application;
-  const [windowWidth, setWidth] = useState(window.innerWidth);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const { name, img, abstract, repo, deployment, details, mobile, thoughts } = application,
+    [windowWidth, setWidth] = useState(window.innerWidth),
+    [isLoaded, setIsLoaded] = useState(false),
+    [isInView, setIsInView] = useState(false),
+    [abstractOpen, setAbstract] = useState(false);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
 
-  const openAbstract = () => {
-    // You can implement functionality here to open the abstract.
+  const toggleAbstract = () => {
+    setAbstract(!abstractOpen)
   };
 
   useEffect(() => {
@@ -27,14 +28,6 @@ export const ProgrammingCard = ({ application }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const container = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
   const textVariants = {
     initial: {
@@ -51,6 +44,7 @@ export const ProgrammingCard = ({ application }) => {
     },
   };
 
+
   const stacksCards = details.stack.map((tech, index) => (
     <StackCard tech={tech} variants={textVariants} key={index} />
   ));
@@ -59,34 +53,51 @@ export const ProgrammingCard = ({ application }) => {
     <div className='programming-card-wrapper'>
       {windowWidth > 1100 ? (
         <>
-
           <motion.div
+            className='image-wrapper'
             initial={false}
             animate={
               isLoaded && isInView
                 ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
                 : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
             }
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1.5, delay: .5 }}
             viewport={{ once: true }}
             onViewportEnter={() => setIsInView(true)}
           >
-            <motion.img
-              className='programming-image'
-              src={img}
-              initial={{ opacity: 0.5, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-            />
+            <img className='programming-image' src={img} onLoad={() => setIsLoaded(true)} />
           </motion.div>
 
 
           <motion.div
             className='app-text-wrapper'
-            variants={container}
+            variants={staggerContainerVariants}
             initial='initial'
             whileInView='animate'
           >
-            <div className='programming-top-wrapper' />
+            {abstractOpen &&
+              <AnimatePresence >
+                <motion.div
+                  className='abstract-modal'
+                  initial='initial'
+                  animate={abstractOpen ? 'animate' : 'initial'}
+                  variants={dropdownVariants}
+                  >
+                  <div className='abstract-top'>
+                    <h2 className='abstract'>Abstract</h2>
+                    <button className='abstract-button' onClick={toggleAbstract}><FaTimes /></button>
+                  </div>
+                  <p className='abstract-paragraph'>
+                    {abstract}
+                  </p>
+                  <p className='abstract-paragraph'>
+                    {thoughts}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+
+            }
+
             <div className='app-name-wrapper'>
               <motion.h2 className={`app-name ${name}`} variants={textVariants}>
                 {name}
@@ -102,14 +113,28 @@ export const ProgrammingCard = ({ application }) => {
               <a className='app-link' href={repo}>
                 GitHub
               </a>
-              <a className='app-link' onClick={openAbstract}>
+              <div className='app-link' onClick={toggleAbstract}>
                 Abstract
-              </a>
+              </div>
             </div>
-            <img src={mobile} className='mobile-img' />
+            <motion.div
+              className='mobile-img-wrapper'
+              initial={false}
+              animate={
+                isLoaded && isInView
+                  ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                  : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+              }
+              transition={{ duration: 1.5, delay: .5 }}
+              viewport={{ once: true }}
+              onViewportEnter={() => setIsInView(true)}
+
+            >
+              <img src={mobile} className='mobile-img' />
+            </motion.div>
           </motion.div>
         </>
-      ) : <ProgrammingCard application={application} />}
+      ) : <ProgrammingCardMobile application={application} />}
     </div>
   );
 };

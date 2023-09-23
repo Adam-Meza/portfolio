@@ -34,7 +34,7 @@
 }
 
 .dropdown-button {
-  z-index: 1;
+  z-index: 3;
   border: 1px solid white;
   width: 30px;
   height: 30px;
@@ -53,13 +53,10 @@
   color: white;
 }
 
-.dropdown-wrapper {
+.dropdown {
   position: fixed;
   top: 0;
   right: 0;
-}
-
-.dropdown {
   transform-origin: top;
   z-index: 1;
   height: 60vh;
@@ -89,4 +86,19 @@
 
 .header-link:hover {
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .header-name, .small {
+    font-size: 16px;
+  }
+
+  .header-creative {
+    font-size: 14px;
+  }
+
+  .header-name-container {
+    width: 35%;
+    min-width: 10rem;
+  }
 }

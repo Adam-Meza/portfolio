@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
+import { dropdownVariants, itemVariants } from '../../utilites';
 
 export const DropDown = ({ handleNav }) => {
   const [open, setOpen] = useState(false);
@@ -14,32 +15,17 @@ export const DropDown = ({ handleNav }) => {
     handleNav(type);
   };
 
-  const wrapper = {
-    animate: {
-      transition: {
-        staggerChildren: 0.8
-      },
-    },
-  };
-
-  
 
   const buttonVariants = {
-    closed: { rotate: 0},
+    closed: { rotate: 0 },
     open: { rotate: -180 },
-  };
-
-  const dropdownVariants = {
-    closed: { scaleY: 0 },
-    open: { scaleY: 1 },
-    exit: {scaleY : 0}
   };
 
   const dropDownContainer = {
     animate: {
       transition: {
         delayChildren: 1,
-        staggerChildren: 0.2
+        staggerChildren: 0.5
       }
     },
   };
@@ -48,8 +34,8 @@ export const DropDown = ({ handleNav }) => {
     initial: {
       y: 30
     },
-    whileInView: {
-      y:0,
+    animate: {
+      y: 0,
       transition: {
         duration: 0.3,
         ease: 'easeIn'
@@ -70,28 +56,28 @@ export const DropDown = ({ handleNav }) => {
       </motion.button>
       <motion.div
         className='dropdown'
-        initial='closed'
-        animate={open ? 'open' : 'closed'}
+        initial='initial'
+        animate={open ? 'animate' : 'initial'}
         variants={dropdownVariants}
       >
         <motion.ul
           variants={dropDownContainer}
           initial="initial"
-          whileInView="animate"
+          animate="animate"
           className='header-link-container'
         >
           <div className='hide-overflow'>
-            <motion.li variants={link}onClick={() => handleLinkClick('programming')} className='header-link'>
+            <motion.li variants={link} className='header-link' onClick={() => handleLinkClick('programming')}>
               programming
             </motion.li>
           </div>
           <div className='hide-overflow'>
-            <motion.li variants={link}className='header-link' onClick={() => handleLinkClick('tattoos')}>
+            <motion.li variants={link} className='header-link' onClick={() => handleLinkClick('tattoos')}>
               tattoos
             </motion.li>
           </div>
           <div className='hide-overflow'>
-            <motion.li variants={link}className='header-link' onClick={() => handleLinkClick('art')}>
+            <motion.li variants={link} className='header-link' onClick={() => handleLinkClick('art')}>
               art
             </motion.li>
           </div>
@@ -102,12 +88,12 @@ export const DropDown = ({ handleNav }) => {
           animate="animate"
           className='header-link-container'>
           <div className='hide-overflow'>
-            <motion.li variants={link}className='header-link' onClick={() => handleLinkClick('about')}>
+            <motion.li variants={link} className='header-link' onClick={() => handleLinkClick('about')}>
               about
             </motion.li>
           </div>
           <div className='hide-overflow'>
-            <motion.li variants={link}className='header-link' onClick={() => handleLinkClick('contact')}>
+            <motion.li variants={link} className='header-link' onClick={() => handleLinkClick('contact')}>
               contact
             </motion.li>
           </div>
@@ -116,3 +102,11 @@ export const DropDown = ({ handleNav }) => {
     </motion.div>
   );
 };
+
+const Link = ({ handleLinkClick, location, variants }) => {
+  <div className='hide-overflow'>
+    <motion.li variants={variants} className='header-link' onClick={() => handleLinkClick(`${location}`)}>
+      {location}
+    </motion.li>
+  </div>
+}

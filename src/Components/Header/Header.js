@@ -3,6 +3,7 @@ import { IntroName } from '../Aside/IntroName';
 import './Header.css';
 import { DropDown } from './DropDown';
 import { motion } from 'framer-motion';
+import { itemVariants } from '../../utilites';
 
 export const Header = ({handleNav}) => {
   return (
@@ -14,7 +15,7 @@ export const Header = ({handleNav}) => {
     >
       <div className='header-name-container' onClick={() => handleNav('')}>
         <IntroName name='ADAM' delay={.9} sizeClass="header-name small" handleNav={handleNav}/>
-        <IntroName name="MEZA" delay={1.4} sizeClass='header-name small' handleNav={handleNav}/>
+        <IntroName name="MEZA" delay={1.6} sizeClass='header-name small' handleNav={handleNav}/>
         <div className='hide-overflow' >
           <motion.div
             className='header-creative'

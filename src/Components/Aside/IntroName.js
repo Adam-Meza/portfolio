@@ -47,7 +47,6 @@ export const IntroName = ({ name, handleNav, variants, delay, sizeClass }) => {
       variants={variants}
     >
       <div className='hide-overflow'>
-
         <motion.div
           className='name-container'
           onClick={() => handleNav("")}

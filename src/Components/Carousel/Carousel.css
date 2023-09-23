@@ -19,16 +19,15 @@
   font-size: 36px;
   z-index: 1;
   position: fixed;
-  top: 4%;
-  left: 11%;
-  height: 100px;
+  bottom: 0;
+  left: 0;
   color: rgb(255, 145, 0);
 }
 
 .carousel-container {
   height: 100vh;
   position: sticky;
-  margin-left: 11%;
+  margin-left: 11vw;
   top: 0;
   display: flex;
   align-items: center;
@@ -46,7 +45,7 @@
 
 @media (max-width: 1440px) {
   .carousel-container{
-    margin-left: 12%;
+    margin-left: 13vw;
   }
 
   .scroll-text{
@@ -64,7 +63,7 @@
 
 @media (max-width: 1100px) {
   .carousel-container{
-    margin-left: 6%;
+    margin-left: 4vw;
   }
 
   .scroll-text {
@@ -75,5 +74,12 @@
 
   .carousel-interior {
     height: 86vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-container{
+    margin-left: 0%;
+    height: 95vh;
   }
 }

@@ -19,7 +19,6 @@ import body4 from '../images/graphite-body5.jpg'
 import birds from '../images/2D-birds.jpg'
 import clouds from '../images/2D-clouds.jpg'
 import rihanna from '../images/2D-rihanna.jpg'
-// import lipstick from '../images/2D-lipstick.jpg'
 import orange from '../images/2D-orange.jpg'
 import newBalance from '../images/2D-newBalance.jpg'
 import newBalance2 from '../images/2D-newBalance2.jpg'
@@ -35,6 +34,7 @@ export const programming = [
     img: hyperLoom,
     mobile: hyperLoomMobile,
     abstract: "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds. It was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",
+    thoughts: "Hyperloom was a learning oppurtinity",
     repo: 'https://github.com/The-Never-Ending-Story/front-end',
     deployment: 'https://hyper-loom-explorer.vercel.app/',
     details: {
@@ -48,6 +48,7 @@ export const programming = [
     img: nectr,
     mobile: nectrMobile,
     abstract: 'Nectr is a web-based Spelling Bee Proxy application. It was built as the final solo project during the third module of Turing. It uses the Free Bee AP.',
+    thoughts: "",
     repo: 'https://github.com/Adam-Meza/nectr-app',
     stack: ['React', 'TypeScript'],
     deployment: 'https://nectr-game-app.vercel.app/',
@@ -61,6 +62,7 @@ export const programming = [
     name: 'wander',
     img: wander,
     abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during the second module at Turing. Wander served as an exercise in routing with JavaScript, designing UI using SASS/SCSS, and hosting information locally.',
+    thoughts: "",
     repo: 'https://github.com/Adam-Meza/Travel-Tracker',
     deployment: '',
     details: {
@@ -73,6 +75,7 @@ export const programming = [
     name: 'boredle',
     img: bordle,
     mobile: bordleMobile,
+    thoughts: "",
     abstract: 'Bordle is mobile based Wordle Proxy application. It allows users to play endless games and see their overall score. It was made during a 8-hour hackathon. It was an excersice in learning a new technology (React Native), working in a fast pased enviorment and mobile deplpoyment.',
     repo: 'https://www.google.com/url?q=https://github.com/Adam-Meza/boredle&sa=D&source=docs&ust=1694356983830676&usg=AOvVaw2abIkSFKWqt9_Ym3M52GCh',
     stack: ['React Native'],

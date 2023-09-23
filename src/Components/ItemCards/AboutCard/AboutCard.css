@@ -41,6 +41,8 @@
   height: 100vh;
   width: 70vw;
   padding: 0px 80px;
+  font-family: "droid-serif", serif;
+
 }
 
 .art-quote {
@@ -81,7 +83,7 @@
 }
 
 .cv-title {
-  border-bottom: .5px solid rgb(247, 222, 234);
+  border-bottom: .5px solid rgb(255, 145, 0);
   margin: 0px;
   margin-bottom: 10px;
   font-size: 40px;
@@ -130,7 +132,7 @@
 .cv-year {
   width: fit-content;
   font-size: 20px;
-  border-bottom: .5px solid rgb(247, 222, 234);
+  border-bottom: .5px solid rgb(255, 145, 0);
 }
 
 .cv-skill-container {
@@ -144,12 +146,12 @@
   padding: 20px;
   letter-spacing: 3px;
   font-family: 'Bebas Neue', sans-serif;
-  border: .5px solid rgb(247, 222, 234);
+  border: .5px solid rgb(255, 145, 0);
 }
 
 @media (max-width: 1100px)  {
   .cv-skill-container {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .art-quote, .jacques, .create {
@@ -174,4 +176,18 @@
   }
 
   
+}
+
+@media (max-width: 700px) {
+  .quote-wrapper {
+    width: 80vw;
+  }
+  
+  .art-quote {
+    font-size: 15px;
+  }
+
+  .cv-item-title {
+    font-size: 16px;
+  }
 }

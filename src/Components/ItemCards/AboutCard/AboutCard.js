@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './AboutCard.css';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { experience } from '../../../assets/work/work';
+import face from '../../../assets/images/possible2.png';
 
 export const AboutCard = ({ handleNav }) => {
   const targetRef = useRef(null);
@@ -10,9 +11,8 @@ export const AboutCard = ({ handleNav }) => {
   });
 
   const quotes = [
-    `"Arts' meaning is owned by no one,`,
-    "but subsists between [artist and spectator],",
-    `excluding any uniform transmission, any identity of cause and effect."`,
+    `Hello, my name is Adam & I make art.`,
+    "I'd love to hear your ideas, and the futures you'd like to make possible ",
   ];
 
   const containerVariants = {
@@ -101,6 +101,11 @@ export const AboutCard = ({ handleNav }) => {
               </div>
               <motion.span className='link create' onClick={() => handleNav('contact')}>Let's create</motion.span>
             </motion.div>
+
+            <div className='about-card-wrapper'>
+              <img className='programming-image' src={face}></img>
+              <span className='year'> this is what i look like</span>
+            </div>
 
 
           </motion.div>
