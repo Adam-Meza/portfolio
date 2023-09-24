@@ -5,7 +5,7 @@
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(28, 67, 102, 0.15);
+  background-color: rgba(1, 17, 25, 0.123);
 }
 
 .intro-wrapper {
@@ -66,4 +66,10 @@
   .intro-text {
     font-size: 15px;
   }
+
+  .intro-text-wrapper {
+    margin-bottom: 18%;
+  }
+
+
 }
