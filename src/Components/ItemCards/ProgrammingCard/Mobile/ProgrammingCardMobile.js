@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { dropdownVariants } from '../../../../utilites';
+import { AnimatePresence, motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
+import { dropdownVariants } from '../../../../utilites';
 
 export const ProgrammingCardMobile = ({ application }) => {
-  const { name, img, abstract, repo, deployment, details, mobile, thoughts} = application;
+  const { name, img, abstract, repo, deployment, details, mobile, thoughts } = application;
   const [windowWidth, setWidth] = useState(window.innerWidth),
     [isLoaded, setIsLoaded] = useState(false),
     [isInView, setIsInView] = useState(false),
@@ -15,7 +15,6 @@ export const ProgrammingCardMobile = ({ application }) => {
   };
 
   const toggleAbstract = () => {
-    console.log('test')
     setAbstract(!abstractOpen)
   };
 
@@ -58,23 +57,28 @@ export const ProgrammingCardMobile = ({ application }) => {
   return (
     <div className='programming-card-wrapper'>
       {abstractOpen &&
-        <motion.div
-          className='mobile-abstract-modal'
-          variants={dropdownVariants}
-          animate={abstractOpen ? 'animate' : 'initial'}
-          transition={{ duration: .4, ease: "easeIn" }}
-        >
-          <div className='abstract-top'>
-            <h2 className='abstract'>Abstract</h2>
-            <button className='abstract-button' onClick={toggleAbstract}><FaTimes onClick={toggleAbstract}/></button>
-          </div>
-          <p className='abstract-paragraph'>
-            {abstract}
-          </p>
-          <p className='abstract-paragraph'>
-            {thoughts}
-          </p>
-        </motion.div>
+        <div className='mobile-modal-wrapper'>
+          {/* <div className='blur-overlay'></div> */}
+          <AnimatePresence>
+            <motion.div
+              className='mobile-abstract-modal'
+              initial='initial'
+              variants={dropdownVariants}
+              animate={ abstractOpen ? 'animate' : "initial"}
+            >
+              <div className='abstract-top'>
+                <h2 className='abstract'>Abstract</h2>
+                <button className='abstract-button' onClick={toggleAbstract}><FaTimes onClick={toggleAbstract} /></button>
+              </div>
+              <p className='abstract-paragraph'>
+                {abstract}
+              </p>
+              <p className='abstract-paragraph'>
+                {thoughts}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       }
       <img src={windowWidth > 500 ? img : mobile} className={windowWidth > 500 ? "programming-image" : 'mobile-mobile-img'} />
       <motion.div
