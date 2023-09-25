@@ -1,6 +1,7 @@
 import hyperLoom from '../images/pixels-hyperloom.jpg'
 import nectr from '../images/pixels-nectr.jpg'
 import bordle from '../images/pixels-bordle.jpg'
+import wanderMobile from '../images/pixels-wander-mobile.jpg'
 import hyperLoomMobile from '../images/pixels-hyperloom-mobile.jpg'
 import nectrMobile from '../images/pixels-nectr-mobile.jpg'
 import bordleMobile from '../images/pixels-bordle-mobile.jpg'
@@ -61,6 +62,7 @@ export const programming = [
   {
     name: 'wander',
     img: wander,
+    mobile: wanderMobile,
     abstract: 'Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during the second module at Turing. Wander served as an exercise in routing with JavaScript, designing UI using SASS/SCSS, and hosting information locally.',
     thoughts: "Wander was the last project I worked with vanilla Javascript. It was also the largest scale project at that time. I definitely pushed myself to build something with log in info, multiple views and an elegant UI/UX",
     repo: 'https://github.com/Adam-Meza/Travel-Tracker',

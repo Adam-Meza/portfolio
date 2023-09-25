@@ -1,5 +1,5 @@
 import React from 'react';
-import face from '../../../assets/images/possible3.png';
+import face from '../../../assets/images/possible3.webp';
 import "./IntroCard.css";
 import { motion } from 'framer-motion';
 
