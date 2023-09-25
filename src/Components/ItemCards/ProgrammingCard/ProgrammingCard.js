@@ -82,17 +82,20 @@ export const ProgrammingCard = ({ application }) => {
                   initial='initial'
                   animate={abstractOpen ? 'animate' : 'initial'}
                   variants={dropdownVariants}
-                  >
+                >
                   <div className='abstract-top'>
                     <h2 className='abstract'>Abstract</h2>
                     <button className='abstract-button' onClick={toggleAbstract}><FaTimes /></button>
                   </div>
-                  <p className='abstract-paragraph'>
-                    {abstract}
-                  </p>
-                  <p className='abstract-paragraph'>
-                    {thoughts}
-                  </p>
+                  <div> 
+                    <p className='abstract-paragraph'>
+                      {abstract}
+                    </p>
+                    <p className='abstract-paragraph'>
+                        {thoughts}
+                    </p>
+                  </div>
+
                 </motion.div>
               </AnimatePresence>
 
