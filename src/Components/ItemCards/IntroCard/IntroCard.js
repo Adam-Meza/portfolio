@@ -25,7 +25,6 @@ export const IntroCard = () => {
 
   return (
     <div className='intro-wrapper'>
-      <div className='overlay'></div>
       <motion.img
         src={face}
         className='intro-img'

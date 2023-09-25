@@ -17,6 +17,7 @@ import hands from '../images/grahphite-hands.jpg'
 import body1 from '../images/graphite-body1.jpg'
 import body3 from '../images/graphite-body4.jpg'
 import body4 from '../images/graphite-body5.jpg'
+import please from '../images/graphite-please.JPG'
 import birds from '../images/2D-birds.jpg'
 import clouds from '../images/2D-clouds.jpg'
 import rihanna from '../images/2D-rihanna.jpg'
@@ -28,6 +29,7 @@ import { FaReact, FaJs, FaCss3, FaHtml5 } from 'react-icons/fa';
 import { TbBrandCypress } from 'react-icons/tb'
 import { FaSass } from 'react-icons/fa'
 import { SiMocha, SiChai, SiTypescript } from 'react-icons/si'
+
 
 export const programming = [
   {
@@ -170,6 +172,11 @@ export const art = [
     year: '2020'
   },
   {
+    img: body4,
+    title: 'from a friend',
+    year: '2021'
+  },
+  {
     img: birds,
     title: 'Cover for Sean Nagel',
     year: '2021'
@@ -178,7 +185,12 @@ export const art = [
     img: corona,
     title: 'Love in the Time of Coronavirus',
     year: '2020'
-  }
+  },
+  {
+    img: please,
+    title: 'pretty please',
+    year: '2020'
+  },
 ]
 export const experience = [
   {
