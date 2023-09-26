@@ -70,6 +70,11 @@
     position: unset;
     font-size: 28px;
   }
+
+  .contact-link-container {
+    width: 100%;
+    min-width: unset;
+  }
 }
 
 @media (max-width: 500px) {
@@ -90,6 +95,7 @@
 
   .contact-link-container {
     width: 100%;
+    min-width: 5rem;
   }
 }
 
