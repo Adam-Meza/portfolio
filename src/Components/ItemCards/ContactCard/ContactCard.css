@@ -30,6 +30,7 @@
 }
 
 .contact-link-container {
+  min-width: 30rem;
   width: 30rem;
   display: flex;
   flex-direction: row;
