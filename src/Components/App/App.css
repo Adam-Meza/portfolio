@@ -6,7 +6,6 @@ body{
   width: 100vw;
   padding: 0px;
   overflow-x: hidden;
-  scroll-snap-type: both mandatory;
   background-color: rgb(1, 17, 25);
 }
 

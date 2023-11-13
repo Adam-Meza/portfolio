@@ -4,7 +4,6 @@
 }
 
 .carousel-wrapper {
-  scroll-snap-type: both mandatory;
   position: relative;
   height: 150vh;
   max-width: 100%;
