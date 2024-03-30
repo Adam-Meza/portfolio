@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export const IntroName = ({ name, handleNav, variants, delay, sizeClass }) => {
   const container = {
     show: {
       transition: {
         delayChildren: delay,
-        staggerChildren: .2,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -18,7 +18,7 @@ export const IntroName = ({ name, handleNav, variants, delay, sizeClass }) => {
     show: {
       y: 0,
       transition: {
-        duration: .5,
+        duration: 0.5,
       },
     },
     exit: {
@@ -27,37 +27,32 @@ export const IntroName = ({ name, handleNav, variants, delay, sizeClass }) => {
         duration: 1,
       },
     },
-  }
+  };
 
-  const nameDisplay = name.split('')
-    .map((letter, index) =>
-      <motion.span
-        key={index}
-        className={`name ${sizeClass}`}
-        variants={letterVariant}
-      >
-        {letter}
-      </motion.span>
-
-    )
-
+  const nameDisplay = name.split("").map((letter, index) => (
+    <motion.span
+      key={index}
+      className={`name ${sizeClass}`}
+      variants={letterVariant}
+    >
+      {letter}
+    </motion.span>
+  ));
 
   return (
-    <motion.div
-      variants={variants}
-    >
-      <div className='hide-overflow'>
+    <motion.div variants={variants}>
+      <div className="hide-overflow">
         <motion.div
-          className='name-container'
+          className="name-container"
           onClick={() => handleNav("")}
           variants={container}
-          initial='initial'
-          animate='show'
-          exit='exit'
+          initial="initial"
+          animate="show"
+          exit="exit"
         >
           {nameDisplay}
         </motion.div>
       </div>
     </motion.div>
-  )
-}
+  );
+};

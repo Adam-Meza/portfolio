@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { FaTimes } from 'react-icons/fa';
-import { dropdownVariants } from '../../../../utilites';
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaTimes } from "react-icons/fa";
+import { dropdownVariants } from "../../../../utilites";
+import { AppLink } from "../ProgrammingCard";
 
 export const ProgrammingCardMobile = ({ application }) => {
-  const { name, img, abstract, repo, deployment, details, mobile, thoughts } = application;
+  const { name, img, abstract, repo, deployment, details, mobile, thoughts } =
+    application;
   const [windowWidth, setWidth] = useState(window.innerWidth),
     [isLoaded, setIsLoaded] = useState(false),
     [isInView, setIsInView] = useState(false),
@@ -15,15 +17,14 @@ export const ProgrammingCardMobile = ({ application }) => {
   };
 
   const toggleAbstract = () => {
-    setAbstract(!abstractOpen)
+    setAbstract(!abstractOpen);
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -45,7 +46,7 @@ export const ProgrammingCardMobile = ({ application }) => {
       rotate: 0,
       transition: {
         duration: 0.45,
-        ease: 'easeIn',
+        ease: "easeIn",
       },
     },
   };
@@ -55,54 +56,50 @@ export const ProgrammingCardMobile = ({ application }) => {
   ));
 
   return (
-    <div className='programming-card-wrapper'>
-      {abstractOpen &&
-        <div className='mobile-modal-wrapper'>
-          {/* <div className='blur-overlay'></div> */}
+    <div className="programming-card-wrapper">
+      {abstractOpen && (
+        <div className="mobile-modal-wrapper">
           <AnimatePresence>
             <motion.div
-              className='mobile-abstract-modal'
-              initial='initial'
+              className="mobile-abstract-modal"
+              initial="initial"
               variants={dropdownVariants}
-              animate={ abstractOpen ? 'animate' : "initial"}
+              animate={abstractOpen ? "animate" : "initial"}
             >
-              <div className='abstract-top'>
-                <h2 className='abstract'>Abstract</h2>
-                <button className='abstract-button' onClick={toggleAbstract}><FaTimes onClick={toggleAbstract} /></button>
+              <div className="abstract-top">
+                <h2 className="abstract">Abstract</h2>
+                <button className="abstract-button" onClick={toggleAbstract}>
+                  <FaTimes onClick={toggleAbstract} />
+                </button>
               </div>
-              <p className='abstract-paragraph'>
-                {abstract}
-              </p>
-              <p className='abstract-paragraph'>
-                {thoughts}
-              </p>
+              <p className="abstract-paragraph">{abstract}</p>
+              <p className="abstract-paragraph">{thoughts}</p>
             </motion.div>
           </AnimatePresence>
         </div>
-      }
-      <img src={windowWidth > 500 ? img : mobile} className={windowWidth > 500 ? "programming-image" : 'mobile-mobile-img'} />
+      )}
+      <img
+        src={windowWidth > 500 ? img : mobile}
+        className={
+          windowWidth > 500 ? "programming-image" : "mobile-mobile-img"
+        }
+      />
       <motion.div
-        className='mobile-app-text-wrapper'
+        className="mobile-app-text-wrapper"
         variants={container}
-        initial='initial'
-        whileInView='animate'
+        initial="initial"
+        whileInView="animate"
       >
-        <div className='app-name-wrapper'>
+        <div className="app-name-wrapper">
           <motion.h2 className={`app-name ${name}`} variants={textVariants}>
             {name}
           </motion.h2>
         </div>
-        <div className='hide-overflow details-container'>{stacksCards}</div>
-        <div className='button-container'>
-          {deployment && (
-            <a className='app-link' href={deployment}>
-              Deployment
-            </a>
-          )}
-          <a className='app-link' href={repo}>
-            GitHub
-          </a>
-          <motion.div className='app-link' onClick={toggleAbstract}>
+        <div className="hide-overflow details-container">{stacksCards}</div>
+        <div className="button-container">
+          {deployment && <AppLink href={deployment} title="Deployment" />}
+          <AppLink href={repo} title="GitHub" />
+          <motion.div className="app-link" onClick={toggleAbstract}>
             Abstract
           </motion.div>
         </div>
@@ -113,7 +110,7 @@ export const ProgrammingCardMobile = ({ application }) => {
 
 const StackCard = ({ tech, variants }) => {
   return (
-    <motion.div className='stack' variants={variants}>
+    <motion.div className="stack" variants={variants}>
       {tech}
     </motion.div>
   );
