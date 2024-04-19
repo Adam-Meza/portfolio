@@ -44,6 +44,20 @@ export const AboutCard = ({ handleNav }) => {
     <CVItemCard variants={itemVariants} key={item.title} item={item} />
   ));
 
+
+  const test = [].map(skillset => {
+   return ( <div className="hide-overflow">
+    <motion.div
+      variants={itemVariants}
+      className="cv-skill-container"
+    >
+      TypeScript | HTML5 | Webpack | Node.JS | Express | Mocha | Chai
+      | Jest
+    </motion.div>
+  </div>
+  )
+  })
+
   return (
     <motion.section
       className="about-wrapper"
