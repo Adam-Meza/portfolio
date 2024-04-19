@@ -1,8 +1,8 @@
-import React from 'react';
-import './Aside.css';
-import { IntroName } from './IntroName';
-import { motion, AnimatePresence } from 'framer-motion';
-import { staggerContainerVariants } from '../../utilites';
+import React from "react";
+import "./Aside.css";
+import { IntroName } from "./IntroName";
+import { motion, AnimatePresence } from "framer-motion";
+import { staggerContainerVariants } from "../../utilites";
 
 export const Aside = ({ handleNav }) => {
   const container = {
@@ -21,7 +21,7 @@ export const Aside = ({ handleNav }) => {
     show: {
       x: 0,
       transition: {
-        duration: .9,
+        duration: 0.9,
       },
     },
     exit: {
@@ -35,39 +35,57 @@ export const Aside = ({ handleNav }) => {
   return (
     <aside>
       <motion.div
-        className='name-wrapper'
-        onClick={() => handleNav('')}
+        className="name-wrapper"
+        onClick={() => handleNav("")}
         variants={staggerContainerVariants}
-        initial='initial'
-        animate='show'
-        exit='exit'
+        initial="initial"
+        animate="show"
+        exit="exit"
       >
-        <IntroName name='ADAM' delay={.3} handleNav={handleNav} sizeClass="large"/>
-        <IntroName name='MEZA' delay={1} handleNav={handleNav} sizeClass="large"/>
-        <span className='creative'>
-          creative
-        </span>
+        <IntroName
+          name="ADAM"
+          delay={0.3}
+          handleNav={handleNav}
+          sizeClass="large"
+        />
+        <IntroName
+          name="MEZA"
+          delay={1}
+          handleNav={handleNav}
+          sizeClass="large"
+        />
+        <span className="creative">creative</span>
       </motion.div>
-      <motion.nav className='link-wrapper' variants={container} initial='initial' animate='show' exit='exit'>
-        <ul className='link-container'>
-          <Link medium='programming' variants={link} handleNav={handleNav} />
-          <Link medium='tattoos' variants={link} handleNav={handleNav} />
-          <Link medium='art' variants={link} handleNav={handleNav} />
+      <motion.nav
+        className="link-wrapper"
+        variants={container}
+        initial="initial"
+        animate="show"
+        exit="exit"
+      >
+        <ul className="link-container">
+          <AsideLink
+            medium="programming"
+            variants={link}
+            handleNav={handleNav}
+          />
+          <AsideLink medium="tattoos" variants={link} handleNav={handleNav} />
+          <AsideLink medium="art" variants={link} handleNav={handleNav} />
         </ul>
-        <ul className='link-container'>
-          <Link medium='about' variants={link} handleNav={handleNav} />
-          <Link medium='contact' variants={link} handleNav={handleNav} />
+        <ul className="link-container">
+          <AsideLink medium="about" variants={link} handleNav={handleNav} />
+          <AsideLink medium="contact" variants={link} handleNav={handleNav} />
         </ul>
       </motion.nav>
     </aside>
   );
 };
 
-const Link = ({ medium, handleNav, variants }) => {
+const AsideLink = ({ medium, handleNav, variants }) => {
   return (
     <motion.li
       variants={variants}
-      className='link'
+      className="link"
       onClick={() => handleNav(medium)}
     >
       {medium}

@@ -1,7 +1,7 @@
 aside {
   height: 45vh;
   width: 11%;
-  margin-left:1%;
+  margin-left: 1%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -31,7 +31,8 @@ aside {
   margin-bottom: 10px;
 }
 
-.link, .header-link {
+.link,
+.header-link {
   all: unset;
   width: fit-content;
   font-size: 19px;
@@ -43,7 +44,7 @@ aside {
   text-align: center;
   margin: 0px;
   letter-spacing: 10px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .large {
@@ -78,7 +79,8 @@ aside {
   font-family: "droid-serif", serif;
 }
 
-.link:hover, .name-wrapper:hover {
+.link:hover,
+.name-wrapper:hover {
   color: rgb(255, 145, 0);
   font-style: italic;
   cursor: pointer;
@@ -111,8 +113,3 @@ aside {
     width: 30%;
   }
 }
-
-
-
-
-
