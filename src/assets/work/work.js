@@ -210,6 +210,10 @@ export const art = [
 ];
 export const experience = [
   {
+    title: "Bentley Systems",
+    description: "Software Engineer | 10/2023 - current",
+  },
+  {
     title: "Turing School of Software Design",
     description:
       "Earned Certificate in Frontend Software Development | 1/2023 - 8/2023",
