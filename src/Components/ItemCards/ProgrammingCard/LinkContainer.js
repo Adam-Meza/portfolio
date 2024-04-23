@@ -4,13 +4,19 @@ import { AppLink } from "./AppLink";
 import { IconCard } from "./IconCard";
 import { staggerContainerVariants, iconVariants } from "../../../utilites";
 import "./ProgrammingCard.css";
+import { Abstract } from "./Abstract";
+import "./ProgrammingCard.css";
 
 export const LinkContainer = ({ application }) => {
-  const { deployment, repo, name, mobile, details, abstractJSX } = application;
+  const { deployment, repo, name, mobile, details, abstract, thoughts } =
+    application;
   const [open, setOpen] = React.useState(false);
   const [windowWidth, setWidth] = React.useState(window.innerWidth);
 
-  const toggleAbstract = () => setOpen(!open);
+  const toggleAbstract = () => {
+    console.log("test");
+    setOpen(!open);
+  };
   const handleResize = () => setWidth(window.innerWidth);
 
   React.useEffect(() => {
@@ -28,7 +34,9 @@ export const LinkContainer = ({ application }) => {
       initial="initial"
       whileInView="animate"
     >
-      {open && !mobile && abstractJSX}
+      {open && windowWidth >= 1100 && (
+        <Abstract abstract={abstract} thoughts={thoughts} />
+      )}
 
       <div className="app-name-wrapper">
         <motion.h2 className={`app-name ${name}`} variants={iconVariants}>
@@ -43,7 +51,7 @@ export const LinkContainer = ({ application }) => {
         <AppLink onClick={toggleAbstract} title="Abstract" />
       </div>
 
-      {windowWidth > 1000 && <img src={mobile} className="mobile-img" />}
+      {windowWidth > 1100 && <img src={mobile} className="mobile-img" />}
     </motion.div>
   );
 };
