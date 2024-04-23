@@ -2,14 +2,36 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import { dropdownVariants } from "../../../../utilites";
-import { AppLink } from "../ProgrammingCard";
+import { AppLink } from "../AppLink";
+import { IconCard } from "../IconCard";
+
+const container = {
+  animate: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const textVariants = {
+  initial: {
+    y: 60,
+    rotate: -25,
+  },
+  animate: {
+    y: 0,
+    rotate: 0,
+    transition: {
+      duration: 0.45,
+      ease: "easeIn",
+    },
+  },
+};
 
 export const ProgrammingCardMobile = ({ application }) => {
   const { name, img, abstract, repo, deployment, details, mobile, thoughts } =
     application;
   const [windowWidth, setWidth] = useState(window.innerWidth),
-    [isLoaded, setIsLoaded] = useState(false),
-    [isInView, setIsInView] = useState(false),
     [abstractOpen, setAbstract] = useState(false);
 
   const handleResize = () => {
@@ -21,38 +43,13 @@ export const ProgrammingCardMobile = ({ application }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
     };
   }, []);
 
-  const container = {
-    animate: {
-      transition: {
-        staggerChildren: 0.25,
-      },
-    },
-  };
-
-  const textVariants = {
-    initial: {
-      y: 60,
-      rotate: -25,
-    },
-    animate: {
-      y: 0,
-      rotate: 0,
-      transition: {
-        duration: 0.45,
-        ease: "easeIn",
-      },
-    },
-  };
-
   const stacksCards = details.stack.map((tech, index) => (
-    <StackCard tech={tech} variants={textVariants} key={index} />
+    <IconCard tech={tech} variants={textVariants} key={index} />
   ));
 
   return (
@@ -84,6 +81,7 @@ export const ProgrammingCardMobile = ({ application }) => {
           windowWidth > 500 ? "programming-image" : "mobile-mobile-img"
         }
       />
+
       <motion.div
         className="mobile-app-text-wrapper"
         variants={container}
@@ -105,13 +103,5 @@ export const ProgrammingCardMobile = ({ application }) => {
         </div>
       </motion.div>
     </div>
-  );
-};
-
-const StackCard = ({ tech, variants }) => {
-  return (
-    <motion.div className="stack" variants={variants}>
-      {tech}
-    </motion.div>
   );
 };

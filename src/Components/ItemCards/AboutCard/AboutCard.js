@@ -1,62 +1,50 @@
 import React from "react";
 import "./AboutCard.css";
 import { motion } from "framer-motion";
-import { experience } from "../../../assets/work/work";
+import { experience, stack } from "../../../assets/work/work";
 import face from "../../../assets/images/possible2.png";
 
+const containerVariants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  initial: {
+    y: 60,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  exit: {
+    y: 40,
+  },
+};
+
+const CVVariants = {
+  initial: {
+    width: "1%",
+  },
+  animate: {
+    width: "100%",
+    transition: {
+      duration: 4,
+    },
+  },
+};
+
 export const AboutCard = ({ handleNav }) => {
-  const containerVariants = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    initial: {
-      y: 60,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 0.4,
-      },
-    },
-    exit: {
-      y: 40,
-    },
-  };
-
-  const CVVariants = {
-    initial: {
-      width: "1%",
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 4,
-      },
-    },
-  };
-
   const cvCards = experience.map((item) => (
     <CVItemCard variants={itemVariants} key={item.title} item={item} />
   ));
 
-
-  const test = [].map(skillset => {
-   return ( <div className="hide-overflow">
-    <motion.div
-      variants={itemVariants}
-      className="cv-skill-container"
-    >
-      TypeScript | HTML5 | Webpack | Node.JS | Express | Mocha | Chai
-      | Jest
-    </motion.div>
-  </div>
-  )
-  })
+  const stackCards = stack.map((skillset) => <StackCard exp={skillset} />);
 
   return (
     <motion.section
@@ -82,23 +70,7 @@ export const AboutCard = ({ handleNav }) => {
                 STACK
               </motion.h3>
             </div>
-            <div className="hide-overflow">
-              <motion.div
-                variants={itemVariants}
-                className="cv-skill-container"
-              >
-                React JS | React Native | CSS | Sass/SCSS | JavaScript ES6 |
-              </motion.div>
-            </div>
-            <div className="hide-overflow">
-              <motion.div
-                variants={itemVariants}
-                className="cv-skill-container"
-              >
-                TypeScript | HTML5 | Webpack | Node.JS | Express | Mocha | Chai
-                | Jest
-              </motion.div>
-            </div>
+            {stackCards}
           </div>
           <div className="hide-overflow">
             <motion.h3 variants={itemVariants} className="cv-year">
@@ -144,11 +116,11 @@ const CVItemCard = ({ item, variants }) => {
   );
 };
 
-const QuoteCard = ({ quote, index, variants }) => {
+const StackCard = ({ exp }) => {
   return (
     <div className="hide-overflow">
-      <motion.div className="art-quote" variants={variants} key={index}>
-        {quote}
+      <motion.div variants={itemVariants} className="cv-skill-container">
+        {exp}
       </motion.div>
     </div>
   );

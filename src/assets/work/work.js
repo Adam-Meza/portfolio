@@ -235,3 +235,9 @@ export const experience = [
     description: "Meadowlark Kitchen | 9/2017- 9-2018",
   },
 ];
+
+export const stack = [
+  "React JS | React Native | CSS | Sass/SCSS | JavaScript ES6 |",
+  " TypeScript | HTML5 | Webpack | Node.JS | Express | Mocha | Chai | Jest",
+  "Docker | Astro | Cypress | Vite | Remix | Azure Dev Ops",
+];
