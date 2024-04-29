@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa'
 import { dropdownVariants } from '../../../utilites'
 
 export const Abstract = (props) => {
-  const {abstract, thoughts} = props
+  const {abstract, thoughts, mobile} = props
   const [open, setOpen] = React.useState(true)
 
   const toggleOpen = () => setOpen(!open)
@@ -12,7 +12,7 @@ export const Abstract = (props) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="abstract-modal"
+        className={mobile ? "mobile-abstract-modal" : "abstract-modal"}
         initial="initial"
         animate={open ? "animate" : "initial"}
         variants={dropdownVariants}

@@ -1,17 +1,22 @@
+import * as React from "react";
+import "./AppLink.css";
+
 export const AppLink = (props) => {
   const { title, href, onClick } = props;
+
+  const element = React.createElement();
 
   return (
     <>
       {href && (
-        <a className="app-link" href={href}>
-          {title}
-        </a>
+        <button className="app-link">
+          <a href={href}>{title}</a>
+        </button>
       )}
       {onClick && (
-        <div className="app-link" onClick={onClick}>
-          {title}
-        </div>
+        <button className="app-link">
+          <span onClick={onClick}>{title}</span>
+        </button>
       )}
     </>
   );

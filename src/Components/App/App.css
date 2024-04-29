@@ -6,7 +6,7 @@ body {
   width: 100vw;
   padding: 0px;
   overflow-x: hidden;
-  background-color: rgb(1, 17, 25);
+  background-color: black;
 }
 
 html {
@@ -30,7 +30,7 @@ html {
 }
 
 .page-wrapper {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -64,12 +64,19 @@ html {
   background-color: rgb(255, 255, 255);
 }
 
-a {
+a,
+button {
   all: unset;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .page-wrapper {
+    padding: 6vh 0vh 2vh 0vh;
+  }
 }
 
 @media (max-width: 400px) {

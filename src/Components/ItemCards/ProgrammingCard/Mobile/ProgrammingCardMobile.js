@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import { dropdownVariants } from "../../../../utilites";
+import { Popover } from "@itwin/itwinui-react";
 import { AppLink } from "../AppLink";
 import { IconCard } from "../IconCard";
+import { Abstract } from "../Abstract";
 
 const container = {
   animate: {
@@ -56,23 +58,7 @@ export const ProgrammingCardMobile = ({ application }) => {
     <div className="programming-card-wrapper">
       {abstractOpen && (
         <div className="mobile-modal-wrapper">
-          <AnimatePresence>
-            <motion.div
-              className="mobile-abstract-modal"
-              initial="initial"
-              variants={dropdownVariants}
-              animate={abstractOpen ? "animate" : "initial"}
-            >
-              <div className="abstract-top">
-                <h2 className="abstract">Abstract</h2>
-                <button className="abstract-button" onClick={toggleAbstract}>
-                  <FaTimes onClick={toggleAbstract} />
-                </button>
-              </div>
-              <p className="abstract-paragraph">{abstract}</p>
-              <p className="abstract-paragraph">{thoughts}</p>
-            </motion.div>
-          </AnimatePresence>
+          <Abstract abstract={abstract} thoughts={thoughts} mobile={true} />
         </div>
       )}
       <img
