@@ -12,10 +12,6 @@ export const Abstract = (props) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={mobile ? "mobile-abstract-modal" : "abstract-modal"}
-        initial="initial"
-        animate={open ? "animate" : "initial"}
-        variants={dropdownVariants}
       >
         <div className="abstract-top">
           <h2 className="abstract">Abstract</h2>

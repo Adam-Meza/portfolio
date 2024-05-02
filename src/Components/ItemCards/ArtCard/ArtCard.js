@@ -11,7 +11,8 @@ export const ArtCard = ({ item }) => {
       </div>
       <div className="art-details-container">
         <span className="art-title">{title}</span>
-        {year && <span className="art-year">( {year} )</span>}
+        {year && (
+          <span className="art-year">( {year} )</span>)}
       </div>
     </section>
   );
