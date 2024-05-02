@@ -10,17 +10,10 @@ import { ContactCard } from "../ItemCards/ContactCard/ContactCard";
 import { Switch, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { Header } from "../Header/Header";
-import openai from "openai";
 
 const App = () => {
   const history = useHistory(),
     [windowWidth, setWidth] = useState(window.innerWidth);
-
-  // const gpt = new openai({
-  //   apiKey: "xNrCGGdNnLP9mPJX9NPFT3BlbkFJCQRTvC9jr83042dylbwR",
-  //   dangerouslyAllowBrowser: true,
-  // });
-
 
   const handleResize = () => {
     setWidth(window.innerWidth);

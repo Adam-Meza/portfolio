@@ -34,7 +34,7 @@ export const programming = [
   {
     name: "HYPERLOOM",
     img: hyperLoom,
-    mobile: hyperLoomMobile,
+    mobileImg: hyperLoomMobile,
     abstract:
       "Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users expansive fictional worlds. It was designed as the final group project of the Turing’s software development program. It was built by a 7 person full stack team over two 2-week sprints.",
     thoughts:
@@ -56,7 +56,7 @@ export const programming = [
   {
     name: "nectr",
     img: nectr,
-    mobile: nectrMobile,
+    mobileImg: nectrMobile,
     abstract:
       "Nectr is a web-based Spelling Bee Proxy application. It was built as the final solo project during the third module of Turing. It uses the Free Bee AP.",
     thoughts:
@@ -79,7 +79,7 @@ export const programming = [
   {
     name: "wander",
     img: wander,
-    mobile: wanderMobile,
+    mobileImg: wanderMobile,
     abstract:
       "Wander is web based travel appliation, which allows users to search, book and manage reservations. It was created over a 1 week sprint during the second module at Turing. Wander served as an exercise in routing with JavaScript, designing UI using SASS/SCSS, and hosting information locally.",
     thoughts:
@@ -102,7 +102,7 @@ export const programming = [
   {
     name: "boredle",
     img: bordle,
-    mobile: bordleMobile,
+    mobileImg: bordleMobile,
     thoughts:
       "Bordle was the last in my series of game apps. I really enjoyed it was a continous work into the fun and silly side of programming. Instead of scalability, I looked to build something that could bring joy.",
     abstract:
@@ -210,6 +210,10 @@ export const art = [
 ];
 export const experience = [
   {
+    title: "Bentley Systems",
+    description: "Software Engineer | 10/2023 - current",
+  },
+  {
     title: "Turing School of Software Design",
     description:
       "Earned Certificate in Frontend Software Development | 1/2023 - 8/2023",
@@ -230,4 +234,10 @@ export const experience = [
     title: "Lead Prep / Baker",
     description: "Meadowlark Kitchen | 9/2017- 9-2018",
   },
+];
+
+export const stack = [
+  "React JS | React Native | CSS | Sass/SCSS | JavaScript ES6 |",
+  " TypeScript | HTML5 | Webpack | Node.JS | Express | Mocha | Chai | Jest",
+  "Docker | Astro | Cypress | Vite | Remix | Azure Dev Ops",
 ];
