@@ -1,0 +1,57 @@
+.modal {
+  background-color: rgb(255, 145, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 33vw;
+  color: white;
+  padding: 20px;
+  font-family: "droid-serif", serif;
+}
+
+.abstract {
+  margin: 0px
+}
+
+.abstract-top {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abstract-button {
+  all: unset;
+  border: 1px white solid;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.abstract-modal {
+  background-color: rgb(255, 145, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5%;
+  width: 90%;
+  height: 95%;
+}
+
+.mobile-abstract-modal {
+  font-family: "droid-serif", serif;
+  background-color: rgb(255, 145, 0);
+  width: 60vw;
+  height: 40vh;
+  display: flex;
+  padding: 0px 5%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5%;
+  font-size: 16px;
+}
