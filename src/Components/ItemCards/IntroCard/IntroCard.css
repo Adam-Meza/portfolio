@@ -5,7 +5,7 @@
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(1, 17, 25, 0.123);
+  background-color: rgba(0,0,0, 0.123);
 }
 
 .intro-wrapper {

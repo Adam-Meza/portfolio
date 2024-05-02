@@ -6,7 +6,8 @@ import { staggerContainerVariants, iconVariants } from "../../../utilites";
 import "./ProgrammingCard.css";
 import { Abstract } from "./Abstract";
 import "./ProgrammingCard.css";
-import {Popover} from '@itwin/itwinui-react'
+import { Popover, Button } from '@itwin/itwinui-react'
+import './AppLink/AppLink.css';
 
 export const LinkContainer = ({ application, mobileImg }) => {
   const { deployment, repo, name, details, abstract, thoughts } =
@@ -45,11 +46,16 @@ export const LinkContainer = ({ application, mobileImg }) => {
             <Abstract
               abstract={abstract}
               thoughts={thoughts}
-              mobile={true} />
+              mobile={true}
+              />
           }
           placement='top-start'
+          closeOnOutsideClick={true}
+          middleware={{ offset: 20}}
         >
-          <AppLink title='Abstract'/> 
+          <Button className="app-link">
+            Abstract
+          </Button>
         </Popover>
       </div>
       {windowWidth > 1100 && <img src={mobileImg} className="mobile-img" />}
